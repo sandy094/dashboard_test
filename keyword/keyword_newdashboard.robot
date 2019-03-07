@@ -65,7 +65,7 @@ Verify SiteRank Value For Basic
     Click Element  //div[@class="header-link-bar text-center"]/a[contains(.,'站台 ')]
 
     # 點選損益的趨勢圖
-    @{rowNumbers}  Set Variable    1  2  3  4  5  6  7  8  9  10
+    @{rowNumbers}  Set Variable    1  2  3 
     :FOR  ${rowNumber}  IN  @{rowNumbers}
     \  Click Element  //table[@id="rank"]/tbody/tr[${rowNumber}]/td[3]
     \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
