@@ -27,9 +27,6 @@ Click Search
     
     Check Dashboard Link    运营看板
     Sleep  2s
-    # Quick Search botton    今日
-    # Check Chart In Four card
-    # Count In A Day For Today
 
     Quick Search botton    昨日
     Check Chart In Four card
@@ -72,7 +69,7 @@ Check Trend Is Active
     Sleep  5s
     Click Element  //ba-card[@class="dashboss_chart payoffSums"]//div/a[contains(.,'排行')]
 
-    @{rows}  Set Variable  2  3  4  5  
+    @{rows}  Set Variable  2  3  4   
     :FOR  ${row}  IN  @{rows}
     \  Wait Until Page Contains Element  //ba-card[@class="dashboss_chart payoffSums"]//tbody/tr[${row}]/td[3]/div/small
     \  Click Element  //ba-card[@class="dashboss_chart payoffSums"]//tbody/tr[${row}]/td[3]/div/small
@@ -215,7 +212,7 @@ Check Trend Is Active
 Search In Datetime 
     Reload Page
     Sleep    10s
-    @{mounths}    Set Variable    0: 2019年3月  1: 2019年2月  2: 2019年1月  3: 2018年12月  4: 2018年11月  5: 2018年10月  6: 2018年9月  7: 2018年8月  
+    @{mounths}    Set Variable    0: 2019年3月  1: 2019年2月  2: 2019年1月  3: 2018年12月 
     :FOR    ${month}  IN  @{mounths}
     \  Search In Month    ${month}
     

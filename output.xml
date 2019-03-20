@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1 (Python 3.6.5 on win32)" generated="20190320 14:14:09.150" rpa="false">
-<suite id="s1" name="Test Sitelist Page" source="C:\unit_dashboard_test\web\web_dashboard\test_sitelist_page.robot">
+<robot generator="Robot 3.1 (Python 3.6.5 on win32)" generated="20190320 15:57:45.024" rpa="false">
+<suite id="s1" name="Test Save Dashboard Page" source="C:\unit_dashboard_test\web\web_dashboard\test_save_dashboard_page.robot">
 <kw name="SuiteSetup" type="setup">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
@@ -8,12 +8,12 @@
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20190320 14:14:09.316" level="INFO">Opening browser 'Chrome' to base url 'https://ppap.pmzoe.com/login/'.</msg>
-<status status="PASS" starttime="20190320 14:14:09.315" endtime="20190320 14:14:16.068"></status>
+<msg timestamp="20190320 15:57:45.181" level="INFO">Opening browser 'Chrome' to base url 'https://ppap.pmzoe.com/login/'.</msg>
+<status status="PASS" starttime="20190320 15:57:45.181" endtime="20190320 15:57:51.453"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20190320 14:14:16.068" endtime="20190320 14:14:17.183"></status>
+<status status="PASS" starttime="20190320 15:57:51.453" endtime="20190320 15:57:52.572"></status>
 </kw>
 <kw name="Login Page" library="keyword_common">
 <arguments>
@@ -25,8 +25,8 @@
 <arguments>
 <arg>${account}</arg>
 </arguments>
-<msg timestamp="20190320 14:14:17.183" level="INFO">brdemos</msg>
-<status status="PASS" starttime="20190320 14:14:17.183" endtime="20190320 14:14:17.184"></status>
+<msg timestamp="20190320 15:57:52.573" level="INFO">brdemos</msg>
+<status status="PASS" starttime="20190320 15:57:52.572" endtime="20190320 15:57:52.573"></status>
 </kw>
 <kw name="Input Account" library="keyword_common">
 <arguments>
@@ -37,7 +37,7 @@
 <arguments>
 <arg>//input[@id="inputEmail3"]</arg>
 </arguments>
-<status status="PASS" starttime="20190320 14:14:17.184" endtime="20190320 14:14:17.199"></status>
+<status status="PASS" starttime="20190320 15:57:52.575" endtime="20190320 15:57:52.595"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -45,10 +45,10 @@
 <arg>//input[@id="inputEmail3"]</arg>
 <arg>${account}</arg>
 </arguments>
-<msg timestamp="20190320 14:14:17.201" level="INFO">Typing text 'brdemos' into text field '//input[@id="inputEmail3"]'.</msg>
-<status status="PASS" starttime="20190320 14:14:17.199" endtime="20190320 14:14:17.297"></status>
+<msg timestamp="20190320 15:57:52.596" level="INFO">Typing text 'brdemos' into text field '//input[@id="inputEmail3"]'.</msg>
+<status status="PASS" starttime="20190320 15:57:52.596" endtime="20190320 15:57:52.677"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:17.184" endtime="20190320 14:14:17.297"></status>
+<status status="PASS" starttime="20190320 15:57:52.573" endtime="20190320 15:57:52.677"></status>
 </kw>
 <kw name="Input Password" library="keyword_common">
 <arguments>
@@ -59,7 +59,7 @@
 <arguments>
 <arg>//input[@id="inputPassword3"]</arg>
 </arguments>
-<status status="PASS" starttime="20190320 14:14:17.298" endtime="20190320 14:14:17.312"></status>
+<status status="PASS" starttime="20190320 15:57:52.677" endtime="20190320 15:57:52.688"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -67,10 +67,10 @@
 <arg>//input[@id="inputPassword3"]</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20190320 14:14:17.313" level="INFO">Typing text '111116' into text field '//input[@id="inputPassword3"]'.</msg>
-<status status="PASS" starttime="20190320 14:14:17.312" endtime="20190320 14:14:17.375"></status>
+<msg timestamp="20190320 15:57:52.688" level="INFO">Typing text '111116' into text field '//input[@id="inputPassword3"]'.</msg>
+<status status="PASS" starttime="20190320 15:57:52.688" endtime="20190320 15:57:52.764"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:17.297" endtime="20190320 14:14:17.375"></status>
+<status status="PASS" starttime="20190320 15:57:52.677" endtime="20190320 15:57:52.764"></status>
 </kw>
 <kw name="Click Signin Button" library="keyword_common">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
@@ -78,28 +78,21 @@
 <arguments>
 <arg>//button[@class="btn btn-default btn-auth"]</arg>
 </arguments>
-<status status="PASS" starttime="20190320 14:14:17.375" endtime="20190320 14:14:17.385"></status>
+<status status="PASS" starttime="20190320 15:57:52.764" endtime="20190320 15:57:52.779"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>//button[@class="btn btn-default btn-auth"]</arg>
 </arguments>
-<msg timestamp="20190320 14:14:17.386" level="INFO">Clicking element '//button[@class="btn btn-default btn-auth"]'.</msg>
-<status status="PASS" starttime="20190320 14:14:17.386" endtime="20190320 14:14:17.446"></status>
+<msg timestamp="20190320 15:57:52.779" level="INFO">Clicking element '//button[@class="btn btn-default btn-auth"]'.</msg>
+<status status="PASS" starttime="20190320 15:57:52.779" endtime="20190320 15:57:52.834"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:17.375" endtime="20190320 14:14:17.446"></status>
+<status status="PASS" starttime="20190320 15:57:52.764" endtime="20190320 15:57:52.835"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:17.183" endtime="20190320 14:14:17.447"></status>
+<status status="PASS" starttime="20190320 15:57:52.572" endtime="20190320 15:57:52.835"></status>
 </kw>
-<kw name="Set Browser Implicit Wait" library="Selenium2Library">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<status status="PASS" starttime="20190320 14:14:17.447" endtime="20190320 14:14:17.448"></status>
-</kw>
-<status status="PASS" starttime="20190320 14:14:09.315" endtime="20190320 14:14:17.448"></status>
+<status status="PASS" starttime="20190320 15:57:45.180" endtime="20190320 15:57:52.835"></status>
 </kw>
 <test id="s1-t1" name="Check login">
 <kw name="Login Page" library="keyword_common">
@@ -112,8 +105,8 @@
 <arguments>
 <arg>${account}</arg>
 </arguments>
-<msg timestamp="20190320 14:14:17.450" level="INFO">brdemos</msg>
-<status status="PASS" starttime="20190320 14:14:17.449" endtime="20190320 14:14:17.450"></status>
+<msg timestamp="20190320 15:57:52.836" level="INFO">brdemos</msg>
+<status status="PASS" starttime="20190320 15:57:52.836" endtime="20190320 15:57:52.836"></status>
 </kw>
 <kw name="Input Account" library="keyword_common">
 <arguments>
@@ -124,7 +117,7 @@
 <arguments>
 <arg>//input[@id="inputEmail3"]</arg>
 </arguments>
-<status status="PASS" starttime="20190320 14:14:17.450" endtime="20190320 14:14:17.457"></status>
+<status status="PASS" starttime="20190320 15:57:52.837" endtime="20190320 15:57:52.846"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -132,10 +125,10 @@
 <arg>//input[@id="inputEmail3"]</arg>
 <arg>${account}</arg>
 </arguments>
-<msg timestamp="20190320 14:14:17.458" level="INFO">Typing text 'brdemos' into text field '//input[@id="inputEmail3"]'.</msg>
-<status status="PASS" starttime="20190320 14:14:17.457" endtime="20190320 14:14:17.517"></status>
+<msg timestamp="20190320 15:57:52.847" level="INFO">Typing text 'brdemos' into text field '//input[@id="inputEmail3"]'.</msg>
+<status status="PASS" starttime="20190320 15:57:52.846" endtime="20190320 15:57:52.910"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:17.450" endtime="20190320 14:14:17.518"></status>
+<status status="PASS" starttime="20190320 15:57:52.836" endtime="20190320 15:57:52.910"></status>
 </kw>
 <kw name="Input Password" library="keyword_common">
 <arguments>
@@ -146,7 +139,7 @@
 <arguments>
 <arg>//input[@id="inputPassword3"]</arg>
 </arguments>
-<status status="PASS" starttime="20190320 14:14:17.518" endtime="20190320 14:14:17.527"></status>
+<status status="PASS" starttime="20190320 15:57:52.911" endtime="20190320 15:57:52.917"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -154,10 +147,10 @@
 <arg>//input[@id="inputPassword3"]</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20190320 14:14:17.527" level="INFO">Typing text '111116' into text field '//input[@id="inputPassword3"]'.</msg>
-<status status="PASS" starttime="20190320 14:14:17.527" endtime="20190320 14:14:17.581"></status>
+<msg timestamp="20190320 15:57:52.918" level="INFO">Typing text '111116' into text field '//input[@id="inputPassword3"]'.</msg>
+<status status="PASS" starttime="20190320 15:57:52.918" endtime="20190320 15:57:52.985"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:17.518" endtime="20190320 14:14:17.581"></status>
+<status status="PASS" starttime="20190320 15:57:52.911" endtime="20190320 15:57:52.985"></status>
 </kw>
 <kw name="Click Signin Button" library="keyword_common">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
@@ -165,33 +158,33 @@
 <arguments>
 <arg>//button[@class="btn btn-default btn-auth"]</arg>
 </arguments>
-<status status="PASS" starttime="20190320 14:14:17.582" endtime="20190320 14:14:17.589"></status>
+<status status="PASS" starttime="20190320 15:57:52.986" endtime="20190320 15:57:52.994"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>//button[@class="btn btn-default btn-auth"]</arg>
 </arguments>
-<msg timestamp="20190320 14:14:17.589" level="INFO">Clicking element '//button[@class="btn btn-default btn-auth"]'.</msg>
-<status status="PASS" starttime="20190320 14:14:17.589" endtime="20190320 14:14:17.627"></status>
+<msg timestamp="20190320 15:57:52.994" level="INFO">Clicking element '//button[@class="btn btn-default btn-auth"]'.</msg>
+<status status="PASS" starttime="20190320 15:57:52.994" endtime="20190320 15:57:53.044"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:17.581" endtime="20190320 14:14:17.627"></status>
+<status status="PASS" starttime="20190320 15:57:52.986" endtime="20190320 15:57:53.044"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:17.449" endtime="20190320 14:14:17.627"></status>
+<status status="PASS" starttime="20190320 15:57:52.836" endtime="20190320 15:57:53.044"></status>
 </kw>
 <tags>
 <tag>Login</tag>
 </tags>
-<status status="PASS" starttime="20190320 14:14:17.448" endtime="20190320 14:14:17.627" critical="yes"></status>
+<status status="PASS" starttime="20190320 15:57:52.835" endtime="20190320 15:57:53.045" critical="yes"></status>
 </test>
-<test id="s1-t2" name="Check sidebar link Operational navigation is correct">
+<test id="s1-t2" name="Check sidebar link Dashboard navigation is correct">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<msg timestamp="20190320 14:14:27.630" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20190320 14:14:17.629" endtime="20190320 14:14:27.630"></status>
+<msg timestamp="20190320 15:58:03.049" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20190320 15:57:53.047" endtime="20190320 15:58:03.049"></status>
 </kw>
 <kw name="Click Sidebar Link" library="keyword_common">
 <arguments>
@@ -202,85 +195,1583 @@
 <arguments>
 <arg>30s</arg>
 </arguments>
-<msg timestamp="20190320 14:14:57.632" level="INFO">Slept 30 seconds</msg>
-<status status="PASS" starttime="20190320 14:14:27.630" endtime="20190320 14:14:57.632"></status>
+<msg timestamp="20190320 15:58:33.051" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20190320 15:58:03.050" endtime="20190320 15:58:33.051"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>//li[@title="${title}"]</arg>
 </arguments>
-<status status="PASS" starttime="20190320 14:14:57.632" endtime="20190320 14:14:57.645"></status>
+<status status="PASS" starttime="20190320 15:58:33.051" endtime="20190320 15:58:33.064"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>//li[@title="${title}"]</arg>
 </arguments>
-<msg timestamp="20190320 14:14:57.646" level="INFO">Clicking element '//li[@title="运营看板"]'.</msg>
-<status status="PASS" starttime="20190320 14:14:57.645" endtime="20190320 14:14:57.708"></status>
+<msg timestamp="20190320 15:58:33.064" level="INFO">Clicking element '//li[@title="运营看板"]'.</msg>
+<status status="PASS" starttime="20190320 15:58:33.064" endtime="20190320 15:58:33.126"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:27.630" endtime="20190320 14:14:57.708"></status>
+<status status="PASS" starttime="20190320 15:58:03.049" endtime="20190320 15:58:33.126"></status>
 </kw>
-<kw name="Check Operational Information Link" library="keyword_sitelist">
-<doc>Click operational information link to check link is correct</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>站台列表</arg>
+<arg>10s</arg>
 </arguments>
-<kw name="Click Topbar Link" library="keyword_common">
-<arguments>
-<arg>${title}</arg>
-</arguments>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>//a[@class='borderr_1px'][contains(.,'${title}')]</arg>
-</arguments>
-<status status="PASS" starttime="20190320 14:14:57.710" endtime="20190320 14:14:58.193"></status>
+<msg timestamp="20190320 15:58:43.128" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20190320 15:58:33.127" endtime="20190320 15:58:43.128"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>//a[@class='borderr_1px'][contains(.,'${title}')]</arg>
+<arg>//div[@class='card-body']/div/div/a[contains(.,'运营看板')]</arg>
 </arguments>
-<msg timestamp="20190320 14:14:58.194" level="INFO">Clicking element '//a[@class='borderr_1px'][contains(.,'站台列表')]'.</msg>
-<status status="PASS" starttime="20190320 14:14:58.193" endtime="20190320 14:14:58.601"></status>
+<msg timestamp="20190320 15:58:43.128" level="INFO">Clicking element '//div[@class='card-body']/div/div/a[contains(.,'运营看板')]'.</msg>
+<status status="PASS" starttime="20190320 15:58:43.128" endtime="20190320 15:58:43.198"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:57.710" endtime="20190320 14:14:58.601"></status>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='card-body']/div/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:58:43.198" endtime="20190320 15:58:43.212"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:57.709" endtime="20190320 14:14:58.602"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='card-body']/div/div/a/div</arg>
+</arguments>
+<msg timestamp="20190320 15:58:43.212" level="INFO">Clicking element '//div[@class='card-body']/div/div/a/div'.</msg>
+<status status="PASS" starttime="20190320 15:58:43.212" endtime="20190320 15:58:43.287"></status>
 </kw>
 <tags>
 <tag>Login</tag>
 </tags>
-<status status="PASS" starttime="20190320 14:14:17.628" endtime="20190320 14:14:58.603" critical="yes"></status>
+<status status="PASS" starttime="20190320 15:57:53.047" endtime="20190320 15:58:43.287" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Check Trend">
+<kw name="Quick Search botton" library="keyword_common">
+<doc>Click Time Search In Quick Search To Search</doc>
+<arguments>
+<arg>本周</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@class="baDateform btn-group hidden_991"]/a[contains(.,'${title}')]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:58:43.290" endtime="20190320 15:58:43.314"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class="baDateform btn-group hidden_991"]/a[contains(.,'${title}')]</arg>
+</arguments>
+<msg timestamp="20190320 15:58:43.315" level="INFO">Clicking link '//div[@class="baDateform btn-group hidden_991"]/a[contains(.,'本周')]'.</msg>
+<status status="PASS" starttime="20190320 15:58:43.315" endtime="20190320 15:58:43.421"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20190320 15:58:53.422" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20190320 15:58:43.421" endtime="20190320 15:58:53.422"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 15:58:53.760" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-116.png"&gt;&lt;img src="selenium-screenshot-116.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 15:58:53.422" endtime="20190320 15:58:53.760"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:58:43.290" endtime="20190320 15:58:53.760"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20190320 15:59:03.762" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20190320 15:58:53.760" endtime="20190320 15:59:03.762"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//ba-card[@id='differenceAmountContent']//div/a[contains(.,'排行')]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:03.762" endtime="20190320 15:59:03.783"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ba-card[@id='differenceAmountContent']//div/a[contains(.,'排行')]</arg>
+</arguments>
+<msg timestamp="20190320 15:59:03.784" level="INFO">Clicking element '//ba-card[@id='differenceAmountContent']//div/a[contains(.,'排行')]'.</msg>
+<status status="PASS" starttime="20190320 15:59:03.784" endtime="20190320 15:59:03.838"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 15:59:04.228" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-117.png"&gt;&lt;img src="selenium-screenshot-117.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 15:59:03.838" endtime="20190320 15:59:04.228"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>@{rows}</var>
+</assign>
+<msg timestamp="20190320 15:59:04.228" level="INFO">@{rows} = [ 2 | 3 | 4 ]</msg>
+<status status="PASS" starttime="20190320 15:59:04.228" endtime="20190320 15:59:04.229"></status>
+</kw>
+<kw name="${row} IN [ @{rows} ]" type="for">
+<kw name="${row} = 2" type="foritem">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//ba-card[@id='differenceAmountContent']//tbody/tr[${row}]/td[3]/div/small</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:04.229" endtime="20190320 15:59:04.239"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ba-card[@id='differenceAmountContent']//tbody/tr[${row}]/td[3]/div/small</arg>
+</arguments>
+<msg timestamp="20190320 15:59:04.240" level="INFO">Clicking element '//ba-card[@id='differenceAmountContent']//tbody/tr[2]/td[3]/div/small'.</msg>
+<status status="PASS" starttime="20190320 15:59:04.240" endtime="20190320 15:59:04.304"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190320 15:59:06.307" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190320 15:59:04.304" endtime="20190320 15:59:06.307"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:06.307" endtime="20190320 15:59:06.317"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 15:59:11.318" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 15:59:06.317" endtime="20190320 15:59:11.318"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 15:59:11.318" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 15:59:11.318" endtime="20190320 15:59:11.353"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 15:59:11.704" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-118.png"&gt;&lt;img src="selenium-screenshot-118.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 15:59:11.354" endtime="20190320 15:59:11.704"></status>
+</kw>
+<kw name="Data Table Check Trend Of List" library="keyword_common">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+<arg>5</arg>
+</arguments>
+<assign>
+<var>@{values}</var>
+</assign>
+<msg timestamp="20190320 15:59:11.705" level="INFO">@{values} = [ 2 | 3 | 4 | 5 ]</msg>
+<status status="PASS" starttime="20190320 15:59:11.705" endtime="20190320 15:59:11.705"></status>
+</kw>
+<kw name="${value} IN [ @{values} ]" type="for">
+<kw name="${value} = 2" type="foritem">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']</arg>
+</arguments>
+<msg timestamp="20190320 15:59:11.705" level="INFO">Clicking element '//div[@class='drop-select']'.</msg>
+<status status="PASS" starttime="20190320 15:59:11.705" endtime="20190320 15:59:11.768"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:11.768" endtime="20190320 15:59:11.782"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<msg timestamp="20190320 15:59:11.783" level="INFO">Clicking element '//div[@class='drop-select']/ul/li[2]'.</msg>
+<status status="PASS" starttime="20190320 15:59:11.783" endtime="20190320 15:59:11.836"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 15:59:16.837" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 15:59:11.836" endtime="20190320 15:59:16.837"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:16.837" endtime="20190320 15:59:16.844"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 15:59:16.844" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 15:59:16.844" endtime="20190320 15:59:16.881"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 15:59:17.219" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-119.png"&gt;&lt;img src="selenium-screenshot-119.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 15:59:16.882" endtime="20190320 15:59:17.219"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:11.705" endtime="20190320 15:59:17.219"></status>
+</kw>
+<kw name="${value} = 3" type="foritem">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']</arg>
+</arguments>
+<msg timestamp="20190320 15:59:17.219" level="INFO">Clicking element '//div[@class='drop-select']'.</msg>
+<status status="PASS" starttime="20190320 15:59:17.219" endtime="20190320 15:59:17.283"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:17.283" endtime="20190320 15:59:17.297"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<msg timestamp="20190320 15:59:17.297" level="INFO">Clicking element '//div[@class='drop-select']/ul/li[3]'.</msg>
+<status status="PASS" starttime="20190320 15:59:17.297" endtime="20190320 15:59:17.355"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 15:59:22.356" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 15:59:17.355" endtime="20190320 15:59:22.356"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:22.356" endtime="20190320 15:59:22.364"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 15:59:22.364" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 15:59:22.364" endtime="20190320 15:59:22.397"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 15:59:22.729" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-120.png"&gt;&lt;img src="selenium-screenshot-120.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 15:59:22.397" endtime="20190320 15:59:22.729"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:17.219" endtime="20190320 15:59:22.730"></status>
+</kw>
+<kw name="${value} = 4" type="foritem">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']</arg>
+</arguments>
+<msg timestamp="20190320 15:59:22.730" level="INFO">Clicking element '//div[@class='drop-select']'.</msg>
+<status status="PASS" starttime="20190320 15:59:22.730" endtime="20190320 15:59:22.765"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:22.765" endtime="20190320 15:59:22.778"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<msg timestamp="20190320 15:59:22.779" level="INFO">Clicking element '//div[@class='drop-select']/ul/li[4]'.</msg>
+<status status="PASS" starttime="20190320 15:59:22.779" endtime="20190320 15:59:22.835"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 15:59:27.837" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 15:59:22.835" endtime="20190320 15:59:27.837"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:27.837" endtime="20190320 15:59:27.844"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 15:59:27.844" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 15:59:27.844" endtime="20190320 15:59:27.882"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 15:59:28.198" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-121.png"&gt;&lt;img src="selenium-screenshot-121.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 15:59:27.882" endtime="20190320 15:59:28.198"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:22.730" endtime="20190320 15:59:28.198"></status>
+</kw>
+<kw name="${value} = 5" type="foritem">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']</arg>
+</arguments>
+<msg timestamp="20190320 15:59:28.198" level="INFO">Clicking element '//div[@class='drop-select']'.</msg>
+<status status="PASS" starttime="20190320 15:59:28.198" endtime="20190320 15:59:28.231"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:28.231" endtime="20190320 15:59:28.244"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<msg timestamp="20190320 15:59:28.244" level="INFO">Clicking element '//div[@class='drop-select']/ul/li[5]'.</msg>
+<status status="PASS" starttime="20190320 15:59:28.244" endtime="20190320 15:59:28.301"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 15:59:33.303" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 15:59:28.301" endtime="20190320 15:59:33.303"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:33.303" endtime="20190320 15:59:33.310"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 15:59:33.310" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 15:59:33.310" endtime="20190320 15:59:33.346"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 15:59:33.665" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-122.png"&gt;&lt;img src="selenium-screenshot-122.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 15:59:33.346" endtime="20190320 15:59:33.665"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:28.198" endtime="20190320 15:59:33.665"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:11.705" endtime="20190320 15:59:33.665"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:11.704" endtime="20190320 15:59:33.665"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class="container bg-white test"]/div/i</arg>
+</arguments>
+<msg timestamp="20190320 15:59:33.665" level="INFO">Clicking element '//div[@class="container bg-white test"]/div/i'.</msg>
+<status status="PASS" starttime="20190320 15:59:33.665" endtime="20190320 15:59:33.722"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:04.229" endtime="20190320 15:59:33.722"></status>
+</kw>
+<kw name="${row} = 3" type="foritem">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//ba-card[@id='differenceAmountContent']//tbody/tr[${row}]/td[3]/div/small</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:33.723" endtime="20190320 15:59:33.740"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ba-card[@id='differenceAmountContent']//tbody/tr[${row}]/td[3]/div/small</arg>
+</arguments>
+<msg timestamp="20190320 15:59:33.740" level="INFO">Clicking element '//ba-card[@id='differenceAmountContent']//tbody/tr[3]/td[3]/div/small'.</msg>
+<status status="PASS" starttime="20190320 15:59:33.740" endtime="20190320 15:59:33.787"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190320 15:59:35.788" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190320 15:59:33.787" endtime="20190320 15:59:35.788"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:35.788" endtime="20190320 15:59:35.795"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 15:59:40.796" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 15:59:35.795" endtime="20190320 15:59:40.796"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 15:59:40.796" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 15:59:40.796" endtime="20190320 15:59:40.830"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 15:59:41.166" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-123.png"&gt;&lt;img src="selenium-screenshot-123.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 15:59:40.830" endtime="20190320 15:59:41.166"></status>
+</kw>
+<kw name="Data Table Check Trend Of List" library="keyword_common">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+<arg>5</arg>
+</arguments>
+<assign>
+<var>@{values}</var>
+</assign>
+<msg timestamp="20190320 15:59:41.167" level="INFO">@{values} = [ 2 | 3 | 4 | 5 ]</msg>
+<status status="PASS" starttime="20190320 15:59:41.167" endtime="20190320 15:59:41.167"></status>
+</kw>
+<kw name="${value} IN [ @{values} ]" type="for">
+<kw name="${value} = 2" type="foritem">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']</arg>
+</arguments>
+<msg timestamp="20190320 15:59:41.167" level="INFO">Clicking element '//div[@class='drop-select']'.</msg>
+<status status="PASS" starttime="20190320 15:59:41.167" endtime="20190320 15:59:41.216"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:41.216" endtime="20190320 15:59:41.229"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<msg timestamp="20190320 15:59:41.229" level="INFO">Clicking element '//div[@class='drop-select']/ul/li[2]'.</msg>
+<status status="PASS" starttime="20190320 15:59:41.229" endtime="20190320 15:59:41.289"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 15:59:46.290" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 15:59:41.289" endtime="20190320 15:59:46.290"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:46.290" endtime="20190320 15:59:46.296"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 15:59:46.297" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 15:59:46.296" endtime="20190320 15:59:46.330"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 15:59:46.666" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-124.png"&gt;&lt;img src="selenium-screenshot-124.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 15:59:46.330" endtime="20190320 15:59:46.666"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:41.167" endtime="20190320 15:59:46.666"></status>
+</kw>
+<kw name="${value} = 3" type="foritem">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']</arg>
+</arguments>
+<msg timestamp="20190320 15:59:46.667" level="INFO">Clicking element '//div[@class='drop-select']'.</msg>
+<status status="PASS" starttime="20190320 15:59:46.667" endtime="20190320 15:59:46.726"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:46.726" endtime="20190320 15:59:46.736"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<msg timestamp="20190320 15:59:46.737" level="INFO">Clicking element '//div[@class='drop-select']/ul/li[3]'.</msg>
+<status status="PASS" starttime="20190320 15:59:46.737" endtime="20190320 15:59:46.785"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 15:59:51.786" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 15:59:46.785" endtime="20190320 15:59:51.786"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:51.786" endtime="20190320 15:59:51.796"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 15:59:51.797" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 15:59:51.796" endtime="20190320 15:59:51.831"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 15:59:52.153" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-125.png"&gt;&lt;img src="selenium-screenshot-125.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 15:59:51.831" endtime="20190320 15:59:52.154"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:46.667" endtime="20190320 15:59:52.154"></status>
+</kw>
+<kw name="${value} = 4" type="foritem">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']</arg>
+</arguments>
+<msg timestamp="20190320 15:59:52.154" level="INFO">Clicking element '//div[@class='drop-select']'.</msg>
+<status status="PASS" starttime="20190320 15:59:52.154" endtime="20190320 15:59:52.216"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:52.216" endtime="20190320 15:59:52.239"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<msg timestamp="20190320 15:59:52.239" level="INFO">Clicking element '//div[@class='drop-select']/ul/li[4]'.</msg>
+<status status="PASS" starttime="20190320 15:59:52.239" endtime="20190320 15:59:52.303"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 15:59:57.305" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 15:59:52.303" endtime="20190320 15:59:57.305"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:57.305" endtime="20190320 15:59:57.312"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 15:59:57.312" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 15:59:57.312" endtime="20190320 15:59:57.346"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 15:59:57.650" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-126.png"&gt;&lt;img src="selenium-screenshot-126.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 15:59:57.347" endtime="20190320 15:59:57.650"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:52.154" endtime="20190320 15:59:57.650"></status>
+</kw>
+<kw name="${value} = 5" type="foritem">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']</arg>
+</arguments>
+<msg timestamp="20190320 15:59:57.651" level="INFO">Clicking element '//div[@class='drop-select']'.</msg>
+<status status="PASS" starttime="20190320 15:59:57.650" endtime="20190320 15:59:57.682"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 15:59:57.683" endtime="20190320 15:59:57.695"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<msg timestamp="20190320 15:59:57.696" level="INFO">Clicking element '//div[@class='drop-select']/ul/li[5]'.</msg>
+<status status="PASS" starttime="20190320 15:59:57.696" endtime="20190320 15:59:57.770"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:00:02.773" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 15:59:57.770" endtime="20190320 16:00:02.773"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:02.773" endtime="20190320 16:00:02.780"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 16:00:02.780" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 16:00:02.780" endtime="20190320 16:00:02.812"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:00:03.132" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-127.png"&gt;&lt;img src="selenium-screenshot-127.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:00:02.812" endtime="20190320 16:00:03.132"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:57.650" endtime="20190320 16:00:03.132"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:41.167" endtime="20190320 16:00:03.132"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:41.167" endtime="20190320 16:00:03.132"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class="container bg-white test"]/div/i</arg>
+</arguments>
+<msg timestamp="20190320 16:00:03.133" level="INFO">Clicking element '//div[@class="container bg-white test"]/div/i'.</msg>
+<status status="PASS" starttime="20190320 16:00:03.132" endtime="20190320 16:00:03.190"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:33.722" endtime="20190320 16:00:03.190"></status>
+</kw>
+<kw name="${row} = 4" type="foritem">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//ba-card[@id='differenceAmountContent']//tbody/tr[${row}]/td[3]/div/small</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:03.190" endtime="20190320 16:00:03.205"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ba-card[@id='differenceAmountContent']//tbody/tr[${row}]/td[3]/div/small</arg>
+</arguments>
+<msg timestamp="20190320 16:00:03.206" level="INFO">Clicking element '//ba-card[@id='differenceAmountContent']//tbody/tr[4]/td[3]/div/small'.</msg>
+<status status="PASS" starttime="20190320 16:00:03.205" endtime="20190320 16:00:03.253"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20190320 16:00:05.253" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190320 16:00:03.253" endtime="20190320 16:00:05.253"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:05.253" endtime="20190320 16:00:05.261"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:00:10.262" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:00:05.261" endtime="20190320 16:00:10.262"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 16:00:10.262" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 16:00:10.262" endtime="20190320 16:00:10.297"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:00:10.638" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-128.png"&gt;&lt;img src="selenium-screenshot-128.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:00:10.297" endtime="20190320 16:00:10.638"></status>
+</kw>
+<kw name="Data Table Check Trend Of List" library="keyword_common">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+<arg>5</arg>
+</arguments>
+<assign>
+<var>@{values}</var>
+</assign>
+<msg timestamp="20190320 16:00:10.639" level="INFO">@{values} = [ 2 | 3 | 4 | 5 ]</msg>
+<status status="PASS" starttime="20190320 16:00:10.638" endtime="20190320 16:00:10.639"></status>
+</kw>
+<kw name="${value} IN [ @{values} ]" type="for">
+<kw name="${value} = 2" type="foritem">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']</arg>
+</arguments>
+<msg timestamp="20190320 16:00:10.639" level="INFO">Clicking element '//div[@class='drop-select']'.</msg>
+<status status="PASS" starttime="20190320 16:00:10.639" endtime="20190320 16:00:10.682"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:10.682" endtime="20190320 16:00:10.695"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<msg timestamp="20190320 16:00:10.695" level="INFO">Clicking element '//div[@class='drop-select']/ul/li[2]'.</msg>
+<status status="PASS" starttime="20190320 16:00:10.695" endtime="20190320 16:00:10.754"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:00:15.754" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:00:10.754" endtime="20190320 16:00:15.754"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:15.754" endtime="20190320 16:00:15.761"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 16:00:15.761" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 16:00:15.761" endtime="20190320 16:00:15.797"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:00:16.132" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-129.png"&gt;&lt;img src="selenium-screenshot-129.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:00:15.797" endtime="20190320 16:00:16.132"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:10.639" endtime="20190320 16:00:16.132"></status>
+</kw>
+<kw name="${value} = 3" type="foritem">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']</arg>
+</arguments>
+<msg timestamp="20190320 16:00:16.132" level="INFO">Clicking element '//div[@class='drop-select']'.</msg>
+<status status="PASS" starttime="20190320 16:00:16.132" endtime="20190320 16:00:16.166"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:16.166" endtime="20190320 16:00:16.178"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<msg timestamp="20190320 16:00:16.178" level="INFO">Clicking element '//div[@class='drop-select']/ul/li[3]'.</msg>
+<status status="PASS" starttime="20190320 16:00:16.178" endtime="20190320 16:00:16.235"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:00:21.237" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:00:16.235" endtime="20190320 16:00:21.237"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:21.237" endtime="20190320 16:00:21.244"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 16:00:21.245" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 16:00:21.244" endtime="20190320 16:00:21.280"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:00:21.614" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-130.png"&gt;&lt;img src="selenium-screenshot-130.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:00:21.280" endtime="20190320 16:00:21.614"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:16.132" endtime="20190320 16:00:21.614"></status>
+</kw>
+<kw name="${value} = 4" type="foritem">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']</arg>
+</arguments>
+<msg timestamp="20190320 16:00:21.614" level="INFO">Clicking element '//div[@class='drop-select']'.</msg>
+<status status="PASS" starttime="20190320 16:00:21.614" endtime="20190320 16:00:21.648"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:21.648" endtime="20190320 16:00:21.656"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<msg timestamp="20190320 16:00:21.656" level="INFO">Clicking element '//div[@class='drop-select']/ul/li[4]'.</msg>
+<status status="PASS" starttime="20190320 16:00:21.656" endtime="20190320 16:00:21.719"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:00:26.719" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:00:21.719" endtime="20190320 16:00:26.719"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:26.719" endtime="20190320 16:00:26.726"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 16:00:26.727" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 16:00:26.726" endtime="20190320 16:00:26.746"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:00:27.081" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-131.png"&gt;&lt;img src="selenium-screenshot-131.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:00:26.746" endtime="20190320 16:00:27.081"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:21.614" endtime="20190320 16:00:27.081"></status>
+</kw>
+<kw name="${value} = 5" type="foritem">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']</arg>
+</arguments>
+<msg timestamp="20190320 16:00:27.082" level="INFO">Clicking element '//div[@class='drop-select']'.</msg>
+<status status="PASS" starttime="20190320 16:00:27.081" endtime="20190320 16:00:27.117"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:27.117" endtime="20190320 16:00:27.127"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='drop-select']/ul/li[${value}]</arg>
+</arguments>
+<msg timestamp="20190320 16:00:27.128" level="INFO">Clicking element '//div[@class='drop-select']/ul/li[5]'.</msg>
+<status status="PASS" starttime="20190320 16:00:27.128" endtime="20190320 16:00:27.196"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:00:32.199" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:00:27.196" endtime="20190320 16:00:32.199"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:32.199" endtime="20190320 16:00:32.206"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='container bg-white test']//canvas</arg>
+</arguments>
+<msg timestamp="20190320 16:00:32.206" level="INFO">Simulating Mouse Over on element '//div[@class='container bg-white test']//canvas'.</msg>
+<status status="PASS" starttime="20190320 16:00:32.206" endtime="20190320 16:00:32.229"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:00:32.547" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-132.png"&gt;&lt;img src="selenium-screenshot-132.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:00:32.230" endtime="20190320 16:00:32.547"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:27.081" endtime="20190320 16:00:32.547"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:10.639" endtime="20190320 16:00:32.547"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:10.638" endtime="20190320 16:00:32.547"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class="container bg-white test"]/div/i</arg>
+</arguments>
+<msg timestamp="20190320 16:00:32.548" level="INFO">Clicking element '//div[@class="container bg-white test"]/div/i'.</msg>
+<status status="PASS" starttime="20190320 16:00:32.547" endtime="20190320 16:00:32.605"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:03.190" endtime="20190320 16:00:32.605"></status>
+</kw>
+<status status="PASS" starttime="20190320 15:59:04.229" endtime="20190320 16:00:32.605"></status>
+</kw>
+<tags>
+<tag>Login</tag>
+</tags>
+<status status="PASS" starttime="20190320 15:58:43.289" endtime="20190320 16:00:32.605" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Search In Datetime">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20190320 16:00:42.610" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20190320 16:00:32.608" endtime="20190320 16:00:42.610"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>0: 2019年3月</arg>
+<arg>1: 2019年2月</arg>
+<arg>2: 2019年1月</arg>
+<arg>3: 2018年12月</arg>
+<arg>4: 2018年11月</arg>
+<arg>5: 2018年10月</arg>
+<arg>6: 2018年9月</arg>
+<arg>7: 2018年8月</arg>
+</arguments>
+<assign>
+<var>@{mounths}</var>
+</assign>
+<msg timestamp="20190320 16:00:42.611" level="INFO">@{mounths} = [ 0: 2019年3月 | 1: 2019年2月 | 2: 2019年1月 | 3: 2018年12月 | 4: 2018年11月 | 5: 2018年10月 | 6: 2018年9月 | 7: 2018年8月 ]</msg>
+<status status="PASS" starttime="20190320 16:00:42.610" endtime="20190320 16:00:42.611"></status>
+</kw>
+<kw name="${month} IN [ @{mounths} ]" type="for">
+<kw name="${month} = 0: 2019年3月" type="foritem">
+<kw name="Search In Month" library="keyword_common">
+<arguments>
+<arg>${month}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:42.611" endtime="20190320 16:00:42.621"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<msg timestamp="20190320 16:00:42.622" level="INFO">Simulating Mouse Over on element '//div[@class='hove_hourset']'.</msg>
+<status status="PASS" starttime="20190320 16:00:42.622" endtime="20190320 16:00:42.646"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:42.646" endtime="20190320 16:00:42.658"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20190320 16:00:42.658" level="INFO">Selecting options from selection list '//div[@class='select_month']/select' by value 0: 2019年3月.</msg>
+<status status="PASS" starttime="20190320 16:00:42.658" endtime="20190320 16:00:42.735"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:00:47.735" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:00:42.735" endtime="20190320 16:00:47.735"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:00:48.083" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-133.png"&gt;&lt;img src="selenium-screenshot-133.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:00:47.735" endtime="20190320 16:00:48.083"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='content-top clearfix']</arg>
+</arguments>
+<msg timestamp="20190320 16:00:48.083" level="INFO">Clicking element '//div[@class='content-top clearfix']'.</msg>
+<status status="PASS" starttime="20190320 16:00:48.083" endtime="20190320 16:00:48.132"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:42.611" endtime="20190320 16:00:48.132"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:42.611" endtime="20190320 16:00:48.132"></status>
+</kw>
+<kw name="${month} = 1: 2019年2月" type="foritem">
+<kw name="Search In Month" library="keyword_common">
+<arguments>
+<arg>${month}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:48.133" endtime="20190320 16:00:48.140"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<msg timestamp="20190320 16:00:48.140" level="INFO">Simulating Mouse Over on element '//div[@class='hove_hourset']'.</msg>
+<status status="PASS" starttime="20190320 16:00:48.140" endtime="20190320 16:00:48.161"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:48.161" endtime="20190320 16:00:48.168"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20190320 16:00:48.168" level="INFO">Selecting options from selection list '//div[@class='select_month']/select' by value 1: 2019年2月.</msg>
+<status status="PASS" starttime="20190320 16:00:48.168" endtime="20190320 16:00:48.297"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:00:53.299" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:00:48.297" endtime="20190320 16:00:53.299"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:00:53.648" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-134.png"&gt;&lt;img src="selenium-screenshot-134.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:00:53.299" endtime="20190320 16:00:53.648"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='content-top clearfix']</arg>
+</arguments>
+<msg timestamp="20190320 16:00:53.649" level="INFO">Clicking element '//div[@class='content-top clearfix']'.</msg>
+<status status="PASS" starttime="20190320 16:00:53.648" endtime="20190320 16:00:53.685"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:48.133" endtime="20190320 16:00:53.685"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:48.133" endtime="20190320 16:00:53.686"></status>
+</kw>
+<kw name="${month} = 2: 2019年1月" type="foritem">
+<kw name="Search In Month" library="keyword_common">
+<arguments>
+<arg>${month}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:53.686" endtime="20190320 16:00:53.693"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<msg timestamp="20190320 16:00:53.694" level="INFO">Simulating Mouse Over on element '//div[@class='hove_hourset']'.</msg>
+<status status="PASS" starttime="20190320 16:00:53.694" endtime="20190320 16:00:53.727"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:53.728" endtime="20190320 16:00:53.734"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20190320 16:00:53.735" level="INFO">Selecting options from selection list '//div[@class='select_month']/select' by value 2: 2019年1月.</msg>
+<status status="PASS" starttime="20190320 16:00:53.734" endtime="20190320 16:00:53.840"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:00:58.841" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:00:53.841" endtime="20190320 16:00:58.841"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:00:59.184" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-135.png"&gt;&lt;img src="selenium-screenshot-135.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:00:58.841" endtime="20190320 16:00:59.184"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='content-top clearfix']</arg>
+</arguments>
+<msg timestamp="20190320 16:00:59.185" level="INFO">Clicking element '//div[@class='content-top clearfix']'.</msg>
+<status status="PASS" starttime="20190320 16:00:59.184" endtime="20190320 16:00:59.220"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:53.686" endtime="20190320 16:00:59.220"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:53.686" endtime="20190320 16:00:59.220"></status>
+</kw>
+<kw name="${month} = 3: 2018年12月" type="foritem">
+<kw name="Search In Month" library="keyword_common">
+<arguments>
+<arg>${month}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:59.220" endtime="20190320 16:00:59.228"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<msg timestamp="20190320 16:00:59.228" level="INFO">Simulating Mouse Over on element '//div[@class='hove_hourset']'.</msg>
+<status status="PASS" starttime="20190320 16:00:59.228" endtime="20190320 16:00:59.261"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:00:59.262" endtime="20190320 16:00:59.268"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20190320 16:00:59.269" level="INFO">Selecting options from selection list '//div[@class='select_month']/select' by value 3: 2018年12月.</msg>
+<status status="PASS" starttime="20190320 16:00:59.269" endtime="20190320 16:00:59.377"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:01:04.379" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:00:59.377" endtime="20190320 16:01:04.379"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:01:04.738" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-136.png"&gt;&lt;img src="selenium-screenshot-136.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:01:04.379" endtime="20190320 16:01:04.738"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='content-top clearfix']</arg>
+</arguments>
+<msg timestamp="20190320 16:01:04.738" level="INFO">Clicking element '//div[@class='content-top clearfix']'.</msg>
+<status status="PASS" starttime="20190320 16:01:04.738" endtime="20190320 16:01:04.791"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:59.220" endtime="20190320 16:01:04.792"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:59.220" endtime="20190320 16:01:04.792"></status>
+</kw>
+<kw name="${month} = 4: 2018年11月" type="foritem">
+<kw name="Search In Month" library="keyword_common">
+<arguments>
+<arg>${month}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:01:04.792" endtime="20190320 16:01:04.801"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<msg timestamp="20190320 16:01:04.801" level="INFO">Simulating Mouse Over on element '//div[@class='hove_hourset']'.</msg>
+<status status="PASS" starttime="20190320 16:01:04.801" endtime="20190320 16:01:04.828"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:01:04.828" endtime="20190320 16:01:04.835"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20190320 16:01:04.835" level="INFO">Selecting options from selection list '//div[@class='select_month']/select' by value 4: 2018年11月.</msg>
+<status status="PASS" starttime="20190320 16:01:04.835" endtime="20190320 16:01:04.942"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:01:09.945" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:01:04.943" endtime="20190320 16:01:09.945"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:01:10.283" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-137.png"&gt;&lt;img src="selenium-screenshot-137.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:01:09.945" endtime="20190320 16:01:10.284"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='content-top clearfix']</arg>
+</arguments>
+<msg timestamp="20190320 16:01:10.284" level="INFO">Clicking element '//div[@class='content-top clearfix']'.</msg>
+<status status="PASS" starttime="20190320 16:01:10.284" endtime="20190320 16:01:10.318"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:01:04.792" endtime="20190320 16:01:10.319"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:01:04.792" endtime="20190320 16:01:10.319"></status>
+</kw>
+<kw name="${month} = 5: 2018年10月" type="foritem">
+<kw name="Search In Month" library="keyword_common">
+<arguments>
+<arg>${month}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:01:10.319" endtime="20190320 16:01:10.326"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<msg timestamp="20190320 16:01:10.326" level="INFO">Simulating Mouse Over on element '//div[@class='hove_hourset']'.</msg>
+<status status="PASS" starttime="20190320 16:01:10.326" endtime="20190320 16:01:10.345"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:01:10.345" endtime="20190320 16:01:10.351"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20190320 16:01:10.352" level="INFO">Selecting options from selection list '//div[@class='select_month']/select' by value 5: 2018年10月.</msg>
+<status status="PASS" starttime="20190320 16:01:10.351" endtime="20190320 16:01:10.457"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:01:15.458" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:01:10.457" endtime="20190320 16:01:15.458"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:01:15.800" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-138.png"&gt;&lt;img src="selenium-screenshot-138.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:01:15.458" endtime="20190320 16:01:15.800"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='content-top clearfix']</arg>
+</arguments>
+<msg timestamp="20190320 16:01:15.801" level="INFO">Clicking element '//div[@class='content-top clearfix']'.</msg>
+<status status="PASS" starttime="20190320 16:01:15.800" endtime="20190320 16:01:15.834"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:01:10.319" endtime="20190320 16:01:15.834"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:01:10.319" endtime="20190320 16:01:15.834"></status>
+</kw>
+<kw name="${month} = 6: 2018年9月" type="foritem">
+<kw name="Search In Month" library="keyword_common">
+<arguments>
+<arg>${month}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:01:15.835" endtime="20190320 16:01:15.843"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<msg timestamp="20190320 16:01:15.843" level="INFO">Simulating Mouse Over on element '//div[@class='hove_hourset']'.</msg>
+<status status="PASS" starttime="20190320 16:01:15.843" endtime="20190320 16:01:15.861"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:01:15.861" endtime="20190320 16:01:15.868"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20190320 16:01:15.868" level="INFO">Selecting options from selection list '//div[@class='select_month']/select' by value 6: 2018年9月.</msg>
+<status status="PASS" starttime="20190320 16:01:15.868" endtime="20190320 16:01:15.970"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:01:20.971" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:01:15.970" endtime="20190320 16:01:20.971"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:01:21.317" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-139.png"&gt;&lt;img src="selenium-screenshot-139.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:01:20.971" endtime="20190320 16:01:21.317"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='content-top clearfix']</arg>
+</arguments>
+<msg timestamp="20190320 16:01:21.318" level="INFO">Clicking element '//div[@class='content-top clearfix']'.</msg>
+<status status="PASS" starttime="20190320 16:01:21.318" endtime="20190320 16:01:21.349"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:01:15.835" endtime="20190320 16:01:21.349"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:01:15.834" endtime="20190320 16:01:21.349"></status>
+</kw>
+<kw name="${month} = 7: 2018年8月" type="foritem">
+<kw name="Search In Month" library="keyword_common">
+<arguments>
+<arg>${month}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:01:21.350" endtime="20190320 16:01:21.357"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='hove_hourset']</arg>
+</arguments>
+<msg timestamp="20190320 16:01:21.358" level="INFO">Simulating Mouse Over on element '//div[@class='hove_hourset']'.</msg>
+<status status="PASS" starttime="20190320 16:01:21.357" endtime="20190320 16:01:21.377"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+</arguments>
+<status status="PASS" starttime="20190320 16:01:21.377" endtime="20190320 16:01:21.384"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//div[@class='select_month']/select</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20190320 16:01:21.385" level="INFO">Selecting options from selection list '//div[@class='select_month']/select' by value 7: 2018年8月.</msg>
+<status status="PASS" starttime="20190320 16:01:21.385" endtime="20190320 16:01:21.490"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20190320 16:01:26.491" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20190320 16:01:21.490" endtime="20190320 16:01:26.491"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 16:01:26.831" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-140.png"&gt;&lt;img src="selenium-screenshot-140.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190320 16:01:26.491" endtime="20190320 16:01:26.831"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='content-top clearfix']</arg>
+</arguments>
+<msg timestamp="20190320 16:01:26.832" level="INFO">Clicking element '//div[@class='content-top clearfix']'.</msg>
+<status status="PASS" starttime="20190320 16:01:26.831" endtime="20190320 16:01:26.866"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:01:21.350" endtime="20190320 16:01:26.866"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:01:21.350" endtime="20190320 16:01:26.867"></status>
+</kw>
+<status status="PASS" starttime="20190320 16:00:42.611" endtime="20190320 16:01:26.867"></status>
+</kw>
+<tags>
+<tag>Login</tag>
+</tags>
+<status status="PASS" starttime="20190320 16:00:32.608" endtime="20190320 16:01:26.867" critical="yes"></status>
 </test>
 <kw name="SuiteTeardown" type="teardown">
-<kw name="Run Keyword If Any Tests Failed" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if one or more tests failed.</doc>
-<arguments>
-<arg>Capture Page Screenshot</arg>
-</arguments>
-<status status="PASS" starttime="20190320 14:14:58.605" endtime="20190320 14:14:58.606"></status>
-</kw>
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20190320 14:14:58.607" endtime="20190320 14:15:01.652"></status>
+<status status="PASS" starttime="20190320 16:01:26.869" endtime="20190320 16:01:29.913"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:58.605" endtime="20190320 14:15:01.652"></status>
+<status status="PASS" starttime="20190320 16:01:26.869" endtime="20190320 16:01:29.913"></status>
 </kw>
-<status status="PASS" starttime="20190320 14:14:09.151" endtime="20190320 14:15:01.652"></status>
+<status status="PASS" starttime="20190320 15:57:45.025" endtime="20190320 16:01:29.913"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0">Critical Tests</stat>
-<stat pass="2" fail="0">All Tests</stat>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0">Login</stat>
+<stat pass="4" fail="0">Login</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" id="s1" name="Test Sitelist Page">Test Sitelist Page</stat>
+<stat pass="4" fail="0" id="s1" name="Test Save Dashboard Page">Test Save Dashboard Page</stat>
 </suite>
 </statistics>
 <errors>

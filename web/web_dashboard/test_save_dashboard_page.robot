@@ -55,7 +55,6 @@ Check Trend
     Sleep    10s
     Wait Until Element Is Visible    //ba-card[@id='differenceAmountContent']//div/a[contains(.,'排行')]
     Click Element    //ba-card[@id='differenceAmountContent']//div/a[contains(.,'排行')]
-    Capture Page Screenshot
 
     @{rows}  Set Variable  2  3  4  
     :FOR  ${row}  IN  @{rows}
@@ -63,6 +62,7 @@ Check Trend
     \  Click Element  //ba-card[@id='differenceAmountContent']//tbody/tr[${row}]/td[3]/div/small
     \  Sleep  2s
     \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
+    \  Sleep  5s
     \  Mouse Over  //div[@class='container bg-white test']//canvas
     \  Capture Page Screenshot
     \  Data Table Check Trend Of List
@@ -102,7 +102,7 @@ Check Trend
 
 Search In Datetime 
     Sleep    10s
-    @{mounths}    Set Variable    0: 2019年3月  1: 2019年2月  2: 2019年1月  3: 2018年12月  4: 2018年11月  5: 2018年10月  6: 2018年9月  7: 2018年8月  
+    @{mounths}    Set Variable    0: 2019年3月  1: 2019年2月  2: 2019年1月  3: 2018年12月 
     :FOR    ${month}  IN  @{mounths}
     \  Search In Month    ${month}
 

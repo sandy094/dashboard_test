@@ -1,10 +1,4 @@
 *** Keywords ***
-# Check Sidebar Link And Verify Page Title
-#     [Arguments]    ${title}
-#     Wait Until Page Contains Element    //li[@title='${title}']
-#     Click Element    //li[@title='${title}']
-#     Wait Until Page Contains    //div[@class='${title}']
-
 Chart Transform
     # 長條圖/趨勢圖轉換
     Page Should Contain Element    //div[@class='CHART-AREA']/echarts-ng2/div/div/canvas    limit=2
@@ -46,7 +40,6 @@ Data Table Check Trend Of List
 
 Data Table Check Game Of List
 # 遊戲頁籤的損益查詢
-
     ${testValueA}  Set Variable    0
     @{values}    Set Variable  2  3  4  5  
     :FOR  ${value}  IN  @{values} 
@@ -105,6 +98,6 @@ Search In Month
     Wait Until Page Contains Element    //div[@class='select_month']/select
     Select From List By Value    //div[@class='select_month']/select    ${title}
     Sleep    5s
-    # Capture Page Screenshot
+    Capture Page Screenshot
     Click Element    //div[@class='content-top clearfix']
 

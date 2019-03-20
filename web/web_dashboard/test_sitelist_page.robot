@@ -101,7 +101,7 @@ Search In Game Classification
     # 判斷是否有更新頁面
     ${newValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
     ${matchRequest}=  Run Keyword And Return Status    Should Not Match  ${orignalValue}  ${newValue}
-    Run Keyword If    '${result}'=='False'    Capture Page Screenshot    ELSE   No Operation
+    Run Keyword If    '${matchRequest}'=='False'    Capture Page Screenshot    ELSE   No Operation
     
     # 檢查趨勢圖是否顯示正常
     trend  2
@@ -120,7 +120,7 @@ Search In Game Hall
     # 判斷是否有更新頁面
     ${newValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
     ${matchRequest}=  Run Keyword And Return Status    Should Not Match  ${orignalValue}  ${newValue}
-    Run Keyword If    '${result}'=='False'    Capture Page Screenshot    ELSE   No Operation
+    Run Keyword If    '${matchRequest}'=='False'    Capture Page Screenshot    ELSE   No Operation
 
     # 查BBIN-彩票
     ${orignalValue}=    Set Variable    ${newValue}
