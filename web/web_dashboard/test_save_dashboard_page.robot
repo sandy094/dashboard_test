@@ -102,7 +102,7 @@ Check Trend
 
 Search In Datetime 
     Sleep    10s
-    @{mounths}    Set Variable    0: 2019年3月  1: 2019年2月  2: 2019年1月  3: 2018年12月 
+    @{mounths}    Set Variable    0: 2019年4月  1: 2019年3月  2: 2019年2月  3: 2019年1月
     :FOR    ${month}  IN  @{mounths}
     \  Search In Month    ${month}
 
@@ -112,7 +112,7 @@ Check Chart
     Execute JavaScript    window.scrollTo(200, document.body.scrollHeight)
     Execute JavaScript  window.scrollTo(100, document.body.scrollHeight)
     Wait Until Page Contains Element  //div[@id='deposit-chart']/div//canvas
-    Page Should Contain Element  //div[@id='deposit-chart']/div//canvas
+    Page Should Contaiup jn Element  //div[@id='deposit-chart']/div//canvas
     Mouse Over  //div[@id='deposit-chart']/div//canvas
     Capture Page Screenshot
 
