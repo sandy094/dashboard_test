@@ -11,23 +11,18 @@ Check login
     Login Page    ${VALID_USER}    ${VALID_PASSWORD}
    
 Check sidebar link Dashboard navigation is correct
-    # 關掉公告訊息提示
-    # Wait Until Page Contains Element    //div[@class='container bg-white boss-know-panel']//button[1]
-    # Click Element  //div[@class='container bg-white boss-know-panel']//button[1]
-    # Click Element  //div[@class='loader-panel load-xs-go p-2']/i
+    Close Announcement
     Set Browser Implicit Wait    20s
     Click Sidebar Link    运营看板
     Click Topbar Link     站台列表
     Click Topbar Link     游戏解析
     No Operation
-
-Click Search
-    Set Browser Implicit Wait    10s
-    # Click Element  //div[@class='modal-content']//div/i
-    
     Check Dashboard Link    运营看板
     Sleep  2s
 
+Click Search
+    Set Browser Implicit Wait    10s
+    
     Quick Search botton    昨日
     Check Chart In Four card
     Execute JavaScript  window.document.documentElement.scrollTo = 0;

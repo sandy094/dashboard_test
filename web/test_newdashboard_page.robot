@@ -11,9 +11,7 @@ Check login
     Login Page    ${VALID_USER}    ${VALID_PASSWORD}
 
 Check sidebar link Dashboard navigation is correct
-    # 關掉公告訊息提示
-    # Wait Until Page Contains Element    //div[@class='container bg-white boss-know-panel']//button[1]
-    # Click Element  //div[@class='container bg-white boss-know-panel']//button[1]
+    Close Announcement
     Sleep    10s
     # Click Element  //div[@class='modal-content']//div/i
     # 關掉日結計算視窗
