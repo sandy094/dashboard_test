@@ -108,10 +108,14 @@ List In Right Way
     
 # 圖表
 Check Chart By Station
-    @{elements}    Set Variable    1    2    3    4    5
+    ${checkValueA}=    Get Text    //div[@class='chart-panel']/div/div/span
+    @{elements}    Set Variable      2    3    4    5
     :FOR    ${i}    IN    @{elements}
     \    Select From List By Value    //select[@class='form-control noborder borderr_1px']    ${i}
     \    Sleep    10s
+    \    ${checkValueB}=  Get Text    //div[@class='chart-panel']/div/div/span
+    \    Should Not Match    ${checkValueA}  ${checkValueB}
+   
 
 Check Chart In Game Station
     [Documentation]    Check Dashboard Chart in button
