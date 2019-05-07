@@ -14,7 +14,7 @@ Check Topbar Link
     [Arguments]    ${title}
     Click Element    //li/a[contains(.,'${title}')]
 
-Check Values
+Check Sitelist Values
     # 判斷是否有更新頁面
     ${orignalValue}  Set Variable  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
     @{columns}  Set Variable  3  4  5  6  7 
@@ -30,7 +30,7 @@ Search In Group
     Click Element  //a[@class='nor_tabs mt-0'][contains(.,'分群')]
     Sleep    2s
     Capture Page Screenshot
-    Click Element  //tab[@id="category"]//button[contains(.,'清除/全选')]
+
     
 verification value
     ${classA}=    Get Text    //div[@id="data-table"]//tbody/tr[1]/td[3]//span[1]

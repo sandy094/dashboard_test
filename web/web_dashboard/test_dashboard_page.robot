@@ -239,26 +239,26 @@ Check Single Chart
     Sleep  5s
     Capture Page Screenshot
 
-# 暫時隱藏
-# Search In Trend
-#     Reload Page
-#     Execute JavaScript  window.document.documentElement.scrollTop = 0;
-#     Sleep    10s
-#     Click Element    //ba-card[@class='dashboss_chart payoffSums']//button[@id='sortMenu']
-#     Click Element    //ba-card[@class='dashboss_chart payoffSums']//li/a[contains(.,'趋势统计')]
-#     Sleep  10s
-#     Wait Until Page Contains Element    //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
-#     Mouse Over  //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
-#     Capture Page Screenshot
-#     Click Element  //button[@class="borderr_1px"][contains(.,'以时合计')]
-#     Sleep  15s
-#     Wait Until Page Contains Element    //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
-#     Mouse Over  //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
-#     Capture Page Screenshot
+暫時隱藏
+Search In Trend
+    Reload Page
+    Execute JavaScript  window.document.documentElement.scrollTop = 0;
+    Sleep    10s
+    Click Element    //ba-card[@class='dashboss_chart payoffSums']//button[@id='sortMenu']
+    Click Element    //ba-card[@class='dashboss_chart payoffSums']//li/a[contains(.,'趋势统计')]
+    Sleep  10s
+    Wait Until Page Contains Element    //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
+    Mouse Over  //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
+    Capture Page Screenshot
+    Click Element  //button[@class="borderr_1px"][contains(.,'以时合计')]
+    Sleep  15s
+    Wait Until Page Contains Element    //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
+    Mouse Over  //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
+    Capture Page Screenshot
 
-# Check sidebar link Verifyaccount navigation is correct
-    # Check Verifyaccount Information Link    对帐资讯    
-    # 娱乐城对帐    站台对帐    对帐设定    抽佣设定    优惠设定    累计查询    站台全站汇出
+Check sidebar link Verifyaccount navigation is correct
+    Check Verifyaccount Information Link    对帐资讯    
+    娱乐城对帐    站台对帐    对帐设定    抽佣设定    优惠设定    累计查询    站台全站汇出
 
 
 *** Keywords ***
