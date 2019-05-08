@@ -9,8 +9,8 @@ Library    String
 ${SERVER}    ppap.pmzoe.com/login
 ${BROWSER}    Chrome
 ${DELAY}    0
-${VALID_USER}    brdemos  
-${VALID_PASSWORD}    111116
+${VALID_USER}    sandy1234    
+${VALID_PASSWORD}    jin123456
 ${LOGIN URL}    https://${SERVER}/
 ${WELCOME URL}    https://${SERVER}/welcome.html
 ${ERROR URL}    https://${SERVER}/error.html

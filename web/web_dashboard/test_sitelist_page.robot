@@ -70,58 +70,62 @@ Check sidebar link Operational navigation is correct
 #     \  Search In Month    ${month}
 #     \  Check Sitelist Values
 
-Search In Game Classification
-    [Teardown]    Run Keyword If Test Failed    Capture Page Screenshot
-    # Reload Page
-    Sleep    10s
-    @{labels}    Set Variable    体育-1  视讯-2  机率-3  彩票-4  棋牌-44
-    :FOR    ${label}  IN  @{labels}
-    \    Sleep    5s
-    \    Wait Until Page Contains Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
-    \    Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
-    \    Sleep  5s
-    \    Wait Until Page Contains Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
-    \    Click Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
-    \    Wait Until Page Contains Element  //label[@for='${label}']  
-    \    Click Element  //label[@for='${label}']
-    \    Sleep    5s
-    \    Wait Until Page Contains Element  //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
-    \    Click Element  //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
-    \    Sleep  5s
-    \    Check Sitelist Values
-    \    Search In Group
-    \    Reload Page
+# Search In Game Classification
+#     [Teardown]    Run Keyword If Test Failed    Capture Page Screenshot
+#     Reload Page
+#     Sleep    10s
+#     @{labels}    Set Variable    体育-1  视讯-2  机率-3  彩票-4  棋牌-44
+#     :FOR    ${label}  IN  @{labels}
+#     \    Sleep    5s
+#     \    Wait Until Page Contains Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+#     \    Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+#     \    Sleep  5s
+#     \    Wait Until Page Contains Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
+#     \    Click Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
+#     \    Wait Until Page Contains Element  //label[@for='${label}']  
+#     \    Click Element  //label[@for='${label}']
+#     \    Sleep    5s
+#     \    Wait Until Page Contains Element  //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
+#     \    Click Element  //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
+#     \    Sleep  5s
+#     \    Check Sitelist Values
+#     \    Search In Group
+#     \    Reload Page
 
-    # //tab[@id="category"]//button[contains(.,'套用')]  舊的div要看還有沒有在
+#     # //tab[@id="category"]//button[contains(.,'套用')]  舊的div要看還有沒有在
     
-    Sleep    3s
-    Wait Until Page Contains Element  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
-    ${orignalValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
-    # 單選細項
-    Click Element  //label[@for='p视讯-2']
-    Click Element  //label[@for='视讯-BB-1']/label
-    Click Element  //label[@for='视讯-AG-6']/label
-    Click Element  //tab[@id="category"]//button[contains(.,'套用')]
-    Sleep    5s
-    # 判斷是否有更新頁面
-    ${newValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
-    ${matchRequest}=  Run Keyword And Return Status    Should Not Match  ${orignalValue}  ${newValue}
-    Run Keyword If    '${matchRequest}'=='False'    Capture Page Screenshot    ELSE   No Operation
+#     Sleep    3s
+#     Wait Until Page Contains Element  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
+#     ${orignalValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
+#     # 單選細項
+#     Wait Until Page Contains Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+#     Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+#     Wait Until Page Contains Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
+#     Click Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
+#     Click Element    //label[@for='p视讯-2']
+#     Click Element    //label[@for='视讯-BB-1']/label
+#     Click Element    //label[@for='视讯-AG-6']/label
+#     Click Element    //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
+#     Sleep    5s
+#     # 判斷是否有更新頁面
+#     ${newValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
+#     ${matchRequest}=  Run Keyword And Return Status    Should Not Match  ${orignalValue}  ${newValue}
+#     Run Keyword If    '${matchRequest}'=='False'    Capture Page Screenshot    ELSE   No Operation
     
-    # 檢查趨勢圖是否顯示正常
-    trend  2
+#     # 檢查趨勢圖是否顯示正常
+#     trend  2
 
 Search In Game Hall
     [Teardown]    Run Keyword If Test Failed    Capture Page Screenshot
-    Reload Page
+    # Reload Page
     Sleep    10s
     # 查BBIN
     ${orignalValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
-    Click Element  //li[contains(.,'类型')] 
-
+    Wait Until Page Contains Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+    Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
     Click Element  //label[@for='pBB-1']/div/label
-    Click Element  //tab[@id="gamehall"]//button[contains(.,'套用')]
-    Sleep    5s
+    Click Element  //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
+    Sleep    7s
     # 判斷是否有更新頁面
     ${newValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
     ${matchRequest}=  Run Keyword And Return Status    Should Not Match  ${orignalValue}  ${newValue}
@@ -129,9 +133,10 @@ Search In Game Hall
 
     # 查BBIN-彩票
     ${orignalValue}=    Set Variable    ${newValue}
-    Click Element  //label[@for='pBB-1']/div/label
-    Click Element  //label[@for='BB-彩票-4']/label
-    Click Element  //tab[@id="gamehall"]//button[contains(.,'套用')]
+    Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+    Click Element    //label[@for='pBB-1']/div/label
+    Click Element    //label[@for='BB-彩票-4']/label
+    Click Element    //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
     Sleep    5s
     # 判斷是否有更新頁面
     ${newValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
@@ -140,8 +145,9 @@ Search In Game Hall
     trend  2
 
     # 查看AG视讯
-    Wait Until Page Contains Element  //tab[@id="gamehall"]//button[contains(.,'清除/全选')]
-    Click Element  //tab[@id="gamehall"]//button[contains(.,'清除/全选')]
+    Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+    Wait Until Page Contains Element  //div[@class="col-12 NAVlist"]//button[contains(.,' 清除')]
+    Click Element  //div[@class="col-12 NAVlist"]//button[contains(.,' 清除')]
     Wait Until Page Contains Element  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
     ${orignalValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
     Click Element  //label[@for='pAG-6']
@@ -162,7 +168,11 @@ Search In Game Hall
 Search In Game Name
     Reload Page
     Sleep    10s
-    Wait Until Page Contains Element  //li[contains(.,'游戏查询')]
+    Wait Until Page Contains Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+    Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+    Wait Until Page Contains Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'游戏查询')]
+    Click Element
+    Wait Until Page Contains Element    //li[contains(.,'游戏查询')]
     Click Element    //li[contains(.,'游戏查询')]
     Input Text  //input[@class='form-control']    足球之巅H5
     Wait Until Page Contains Element  //button[@id='ngb-typeahead-0-0']

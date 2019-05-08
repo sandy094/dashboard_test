@@ -24,28 +24,10 @@ Check Dashboard Link
     [Arguments]    ${title}
     Check Topbar Link    ${title}
 
-# Check Sidebar Link And Verify Page Title
-#     [Documentation]    Check sidebar link and verify this page title is correct
-#     [Arguments]    ${title}
-#     Click Sidebar Link    ${title}
-#     Wait Until Page Contains Element    //a[contains(.,'${title}')]
-
 Check Topbar Link
     [Arguments]    ${title}
     Click Element    //li/a[contains(.,'${title}')]
 
-# Check Verifyaccount Information Link
-#     [Documentation]    Click Verifyaccount information link to check link is correct
-#     [Arguments]    ${title}    ${title2}    ${title3}    ${title4}    ${title_item1}    ${title_item2}    ${title5}    ${title6}
-#     Click Sidebar Link    ${title}
-#     Click Sidebar Link    ${title2}
-#     Click Sidebar Link    ${title3}
-#     Click Sidebar Link    ${title4}
-#     Sleep    10s
-#     Check Sidebar Link And Verify Page Title    ${title_item1}
-#     Check Sidebar Link And Verify Page Title    ${title_item2}
-#     Click Sidebar Link    ${title5}
-#     Click Sidebar Link    ${title6}
 
 Count In A Day For Today
     @{cards}    Set Variable    dashboss_chart payoffSums    dashboss_chart commissionableSums    dashboss_chart wagersCounts    dashboss_chart memberCounts    
