@@ -15,16 +15,12 @@ Check sidebar link Dashboard navigation is correct
     Sleep    10s
     Click Sidebar Link    运营看板
     Sleep    10s
-    Click Element    //div[@class='card-body']/div/div/a[contains(.,'运营看板')]
-    Wait Until Page Contains Element  //div[@class='card-body']/div/div/a/div
-    Click Element  //div[@class='card-body']/div/div/a/div
+    Click Element    //a[@class='borderr_1px active'][contains(.,'运营看板')]
+    Wait Until Page Contains Element  //a[@class='borderr_1px active'][contains(.,'运营看板')]/div[contains(.,' 存提资讯 ')]
+    Click Element  //a[@class='borderr_1px active'][contains(.,'运营看板')]/div[contains(.,' 存提资讯 ')]
    
 Click Search
-    Set Browser Implicit Wait    10s
-
-    Quick Search botton    昨日
-    Check Chart In Four card
-    Count In Seven Days For yesterday
+    Sleep    10s
 
     Quick Search botton    本周
     Check Chart In Four card
@@ -47,9 +43,8 @@ Click Search
     \  Count In A Day For months
 
 Check Trend
-    # Click Element  //div[@class='modal-content']//div/i
     # 排行裡單一站台的趨勢圖(本周的4張卡片)
-    Quick Search botton    本周
+    Quick Search botton    上周
     Sleep    10s
     Wait Until Element Is Visible    //ba-card[@id='differenceAmountContent']//div/a[contains(.,'排行')]
     Click Element    //ba-card[@id='differenceAmountContent']//div/a[contains(.,'排行')]
@@ -110,7 +105,7 @@ Check Chart
     Execute JavaScript    window.scrollTo(200, document.body.scrollHeight)
     Execute JavaScript  window.scrollTo(100, document.body.scrollHeight)
     Wait Until Page Contains Element  //div[@id='deposit-chart']/div//canvas
-    Page Should Contaiup jn Element  //div[@id='deposit-chart']/div//canvas
+    Page Should Contain Element  //div[@id='deposit-chart']/div//canvas
     Mouse Over  //div[@id='deposit-chart']/div//canvas
     Capture Page Screenshot
 

@@ -97,6 +97,7 @@ Check Chart By Station
     \    Sleep    10s
     \    ${checkValueB}=  Get Text    //div[@class='chart-panel']/div/div/span
     \    Should Not Match    ${checkValueA}  ${checkValueB}
+    \    ${checkValueA}=    Set Variable    ${checkValueB}
    
 
 Check Chart In Game Station

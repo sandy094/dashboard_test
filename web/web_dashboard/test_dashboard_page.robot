@@ -66,32 +66,32 @@ Check Trend Is Active
 
     @{rows}  Set Variable  2  3  4   
     :FOR  ${row}  IN  @{rows}
-    \  Wait Until Page Contains Element  //ba-card[@class="dashboss_chart payoffSums"]//tbody/tr[${row}]/td[3]/div/small
-    \  Click Element  Count In Seven Days For yesterday
+    \  Wait Until Page Contains Element    //ba-card[@class="dashboss_chart payoffSums"]//tbody/tr[${row}]/td[3]/div/small
+    \  Click Element    //ba-card[@class="dashboss_chart payoffSums"]//tbody/tr[${row}]/td[3]/div/small
     \  Sleep  5s
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Wait Until Page Contains Element    //div[@class='container bg-white test']//canvas
+    \  Mouse Over    //div[@class='container bg-white test']//canvas
     \  Capture Page Screenshot
 
     \  Data Table Check Trend Of List
-    \  Click Element  //div[@class='drop-select']
-    \  Wait Until Page Contains Element  //div[@class='drop-select']/ul/li[1]
-    \  Click Element  //div[@class='drop-select']/ul/li[1]  
+    \  Click Element    //div[@class='drop-select']
+    \  Wait Until Page Contains Element    //div[@class='drop-select']/ul/li[1]
+    \  Click Element    //div[@class='drop-select']/ul/li[1]  
 
     # 切換以時合計
-    \  Click Element  //div[@class='w__time__pick_left']/div/span[2]
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Click Element    //div[@class='w__time__pick_left']/div/span[2]
+    \  Wait Until Page Contains Element    //div[@class='container bg-white test']//canvas
+    \  Mouse Over    //div[@class='container bg-white test']//canvas
     \  Sleep  5s
     \  Capture Page Screenshot
     # 切換以日合計
-    \  Click Element  //div[@class='w__time__pick_left']/div/span[3]
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Click Element    //div[@class='w__time__pick_left']/div/span[3]
+    \  Wait Until Page Contains Element    //div[@class='container bg-white test']//canvas
+    \  Mouse Over    //div[@class='container bg-white test']//canvas
     \  Sleep  3s
     \  Capture Page Screenshot 
     
-    # 切換遊戲頁籤，測是帳號沒辦法用
+    # 切換遊戲頁籤，測試帳號沒辦法用
     # \  Click Element  //div[@id='chart']/div/div/a[2]
     # \  Sleep  10s
     # \  Wait Until Page Contains Element  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
@@ -99,8 +99,8 @@ Check Trend Is Active
     # \  Should Not Be Empty  ${testValue}
     # \  Data Table Check Game Of List
 
-    # \  Click Element  //div[@class="container bg-white test"]/div/i
-    # \  Sleep  3s
+    \  Click Element  //div[@class="container bg-white test"]/div/i
+    \  Sleep  3s
 
     Click Element  //ba-card[@class="dashboss_chart commissionableSums"]//div/a[contains(.,'排行')]
     @{rows}  Set Variable  2  3  4  5  
@@ -127,6 +127,7 @@ Check Trend Is Active
     \  Sleep  3s
     \  Capture Page Screenshot 
 
+    # 切換遊戲頁籤，測試帳號沒辦法用
     # \  Click Element  //div[@id='chart']/div/div/a[2]
     # \  Sleep  10s
     # \  Wait Until Page Contains Element  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
@@ -134,8 +135,8 @@ Check Trend Is Active
     # \  Should Not Be Empty  ${testValue}
     # \  Data Table Check Game Of List
 
-    # \  Click Element  //div[@class="container bg-white test"]/div/i
-    # \  Sleep  3s
+    \  Click Element  //div[@class="container bg-white test"]/div/i
+    \  Sleep  3s
 
     Click Element  //ba-card[@class="dashboss_chart wagersCounts"]//div/a[contains(.,'排行')]
     @{rows}  Set Variable  2  3  4  5  
@@ -162,6 +163,7 @@ Check Trend Is Active
     \  Sleep  3s
     \  Capture Page Screenshot 
 
+    # 切換遊戲頁籤，測試帳號沒辦法用
     # \  Click Element  //div[@id='chart']/div/div/a[2]
     # \  Sleep  10s
     # \  Wait Until Page Contains Element  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
@@ -169,8 +171,8 @@ Check Trend Is Active
     # \  Should Not Be Empty  ${testValue}
     # \  Data Table Check Game Of List
 
-    # \  Click Element  //div[@class="container bg-white test"]/div/i
-    # \  Sleep  3s
+    \  Click Element  //div[@class="container bg-white test"]/div/i
+    \  Sleep  3s
 
     Click Element  //ba-card[@class="dashboss_chart memberCounts"]//div/a[contains(.,'排行')]
     @{rows}  Set Variable  2  3  4  5  
@@ -204,8 +206,8 @@ Check Trend Is Active
     # \  Should Not Be Empty  ${testValue}
     # \  Data Table Check Game Of List
 
-    # \  Click Element  //div[@class="container bg-white test"]/div/i
-    # \  Sleep  3s
+    \  Click Element  //div[@class="container bg-white test"]/div/i
+    \  Sleep  3s
 
 Search In Datetime 
     Reload Page
@@ -242,26 +244,26 @@ Check Single Chart
     Sleep  5s
     Capture Page Screenshot
 
-暫時隱藏
-Search In Trend
-    Reload Page
-    Execute JavaScript  window.document.documentElement.scrollTop = 0;
-    Sleep    10s
-    Click Element    //ba-card[@class='dashboss_chart payoffSums']//button[@id='sortMenu']
-    Click Element    //ba-card[@class='dashboss_chart payoffSums']//li/a[contains(.,'趋势统计')]
-    Sleep  10s
-    Wait Until Page Contains Element    //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
-    Mouse Over  //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
-    Capture Page Screenshot
-    Click Element  //button[@class="borderr_1px"][contains(.,'以时合计')]
-    Sleep  15s
-    Wait Until Page Contains Element    //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
-    Mouse Over  //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
-    Capture Page Screenshot
+# 暫時隱藏
+# Search In Trend
+#     Reload Page
+#     Execute JavaScript  window.document.documentElement.scrollTop = 0;
+#     Sleep    10s
+#     Click Element    //ba-card[@class='dashboss_chart payoffSums']//button[@id='sortMenu']
+#     Click Element    //ba-card[@class='dashboss_chart payoffSums']//li/a[contains(.,'趋势统计')]
+#     Sleep  10s
+#     Wait Until Page Contains Element    //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
+#     Mouse Over  //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
+#     Capture Page Screenshot
+#     Click Element  //button[@class="borderr_1px"][contains(.,'以时合计')]
+#     Sleep  15s
+#     Wait Until Page Contains Element    //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
+#     Mouse Over  //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
+#     Capture Page Screenshot
 
-Check sidebar link Verifyaccount navigation is correct
-    Check Verifyaccount Information Link    对帐资讯    
-    娱乐城对帐    站台对帐    对帐设定    抽佣设定    优惠设定    累计查询    站台全站汇出
+# Check sidebar link Verifyaccount navigation is correct
+#     Check Verifyaccount Information Link    对帐资讯    
+#     娱乐城对帐    站台对帐    对帐设定    抽佣设定    优惠设定    累计查询    站台全站汇出
 
 
 *** Keywords ***
