@@ -46,14 +46,14 @@ Verify Basic Table Is Active
 Verify Basic Information Table Is Active
     # 運營資訊
     Click Element  //div[@class="header-link-bar text-center"]/a[contains(.,'运营 ')]
-    Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'活跃会员')]
+    Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'游戏人次')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'损益')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'营收比')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'有效投注')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'投注单量')]
     Page Should Contain Element  //div[@id='barChart']//echarts-ng2//canvas
 
-    @{elements}  Set Variable  活跃会员  损益  营收比  有效投注  投注单量
+    @{elements}  Set Variable  游戏人次  损益  营收比  有效投注  投注单量
     :FOR  ${element}  IN  @{elements}
     \  Click Element  //div[@class="header-link-bar text-center"]/a[contains(.,'运营 ')]
     \  Click Element  //div[@class="allData-item"]/span[contains(.,'${element}')]
@@ -72,13 +72,14 @@ Verify SiteRank Value For Basic
     \  Sleep  3s
     \  Mouse Over  //div[@class='container bg-white test']//canvas
     \  Data Table Check Trend Of List
-    \  Click Element  //div[@id='chart']/div/div/a[2]
-    \  Sleep  15s
-    \  ${result}=  Run Keyword And Return Status    Wait Until Page Contains Element  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
-    \  Run Keyword If    '${result}'=='Fasle'    Capture Page Screenshot    Else    No Operation
-    \  ${testValue}=  Get Text  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
-    \  Should Not Be Empty  ${testValue}
-    \  Data Table Check Game Of List
+    # 切換遊戲
+    # \  Click Element  //div[@id='chart']/div/div/a[2]
+    # \  Sleep  15s
+    # \  ${result}=  Run Keyword And Return Status    Wait Until Page Contains Element  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
+    # \  Run Keyword If    '${result}'=='Fasle'    Capture Page Screenshot    Else    No Operation
+    # \  ${testValue}=  Get Text  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
+    # \  Should Not Be Empty  ${testValue}
+    # \  Data Table Check Game Of List
     \  Click Element  //div[@class='container bg-white test']/div/i
 
     # 點展開
@@ -124,7 +125,7 @@ Verify Basic Information Table For Years
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'投注单量')]
     Page Should Contain Element  //div[@id='barChart']//echarts-ng2//canvas
 
-    @{elements}  Set Variable  活跃会员  损益  营收比  有效投注  投注单量
+    @{elements}  Set Variable  游戏人次  损益  营收比  有效投注  投注单量
     :FOR  ${element}  IN  @{elements}
     \  Click Element  //div[@class="header-link-bar text-center"]/a[contains(.,'运营 ')]
     \  Click Element  //div[@class="allData-item"]/span[contains(.,'${element}')]
@@ -154,14 +155,14 @@ Verify Save Information Table Is Active
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'取款总额')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'存提差额')]
 
-    Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'活跃会员')]
+    Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'游戏人次')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'损益')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'营收比')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'有效投注')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'投注单量')]
     Page Should Contain Element  //div[@id='barChart']//echarts-ng2//canvas
     # change chart
-    @{elements}  Set Variable  存款总额  首存总额  取款总额  存提差额  活跃会员  损益  营收比  有效投注  投注单量
+    @{elements}  Set Variable  存款总额  首存总额  取款总额  存提差额  游戏人次  损益  营收比  有效投注  投注单量
     :FOR  ${element}  IN  @{elements}
     \  Click Element  //div[@class="header-link-bar text-center"]/a[contains(.,'运营 ')]
     \  Click Element  //div[@class="allData-item"]/span[contains(.,'${element}')]

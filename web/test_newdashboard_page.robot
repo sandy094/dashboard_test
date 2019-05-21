@@ -13,7 +13,6 @@ Check login
 Check sidebar link Dashboard navigation is correct
     Close Announcement
     Sleep    10s
-    # Click Element  //div[@class='modal-content']//div/i
     # 關掉日結計算視窗
     # Click Element  //div[@class='loader-panel load-xs-go p-2']/i
     Check Topbar Link    综合看板
@@ -47,7 +46,7 @@ Check Search For Basic
     \  Reload Page
 
 Check Save Search
-    [Teardown]  Run Keyword If Any Tests Failed    Capture Page Screenshot
+    [Teardown]    Run Keyword If Test Failed    Capture Page Screenshot
     Reload Page
     Sleep    10s
     @{days}  Set Variable  昨日  本周  上周  本月  上月  
@@ -131,15 +130,16 @@ Advanced Search-category
     @{cates}  Set variable    棋牌     彩票    视讯   体育    机率 
     :FOR  ${cate}  IN  @{cates}
     \  Sleep    5s
-    \  Wait Until Page Contains Element  //div[@class='mt-2 mb-2']/button[contains(.,'${cate}')]
-    \  Click Element  //div[@class='mt-2 mb-2']/button[contains(.,'${cate}')]
-    \  Click Element  //div[@class='mt-2 text-right']/button
-    \  Page Should Contain Element  //div[@class='kanban-title']/div[contains(.,'${cate}')]
-    \  Sleep  3s
-    \  Wait Until Page Contains Element  //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[1]/td[2]  10s
-    \  Wait Until Page Contains Element  //div[@class='kanban-title']/div[@class="eveday_bgcolor"][contains(.,'${cate}')]
+    \  Wait Until Page Contains Element    //div[@class='mt-2 mb-2']/button[contains(.,'${cate}')]
+    \  Click Element    //div[@class='mt-2 mb-2']/button[contains(.,'${cate}')]
+    \  Click Element    //div[@class='mt-2 text-right']/button
+    \  Page Should Contain Element    //div[@class='kanban-title']/div[contains(.,'${cate}')]
+    \  Sleep  5s
+    \  Wait Until Page Contains Element    //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[1]/td[2]  10s
+    \  Wait Until Page Contains Element    //div[@class='kanban-title']/div[@class="eveday_bgcolor"][contains(.,'${cate}')]
     \  ${CheckValueB}=  Get Text  //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[1]/td[3]
-    \  Should Not Match  ${CheckValueA}  ${CheckValueB}
+    \  Run Keyword And Return Status    Should Not Match  ${CheckValueA}  ${CheckValueB}
+    \  ${CheckValueA}=    Set Variable    ${CheckValueB}
     \  Reload Page
 
 Advanced Search-station
@@ -153,53 +153,55 @@ Advanced Search-station
     \  Click Element  //div[@class='fast-city-select-panel']/button[contains(.,'${cate}')]
     \  Click Element  //div[@class='mt-2 text-right']/button
     \  Page Should Contain Element  //div[@class='kanban-title']/div[contains(.,'${cate}')]
-    \  Sleep  3s
+    \  Sleep  5s
     \  ${CheckValueB}=  Get Text  //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[1]/td[2]
-    \  Should Not Match  ${CheckValueA}  ${CheckValueB}
+    \  Run Keyword And Return Status    Should Not Match  ${CheckValueA}  ${CheckValueB}
+    \  ${CheckValueA}=    Set Variable    ${CheckValueB}
     \  Reload Page
 
 Value Verificarion For Basic 
+    Execute JavaScript  window.document.documentElement.scrollTop = 0;
     Reload Page
     Sleep    5s
     Click Element  //a[@class='active-bright']
     Wait Until Page Contains Element  //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[3]
     # 損益
-    ${PayoffValueA}=  Get Text  //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[3]//div[@class='text-right cell-nowrap']/span[1]
-    ${PayoffValueB}=  Get Text  //div[@class='allData-item'][contains(.,'损益')]/div[2]
+    ${PayoffValueA}=  Get Text    //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[3]//ng-component/div/span[1]
+    ${PayoffValueB}=  Get Text    //div[@class='allData-item'][contains(.,'损益')]/div[2]
     Should Match  ${PayoffValueA}  ${PayoffValueB}
     # 有效投注
-    ${BettingValueA}=  Get Text  //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[4]//div[@class='text-right cell-nowrap']/span[1]
-    ${BettingValueB}=  Get Text  //div[@class='allData-item'][contains(.,'有效投注')]/div[2]
+    ${BettingValueA}=  Get Text    //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[4]//ng-component/div/span[1]
+    ${BettingValueB}=  Get Text    //div[@class='allData-item'][contains(.,'有效投注')]/div[2]
     Should Match  ${BettingValueA}  ${BettingValueB} 
     # 營收比
-    ${BiteValueA}=  Get Text  //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[5]//div[@class='text-right cell-nowrap']/span[1]
-    ${BiteValueB}=  Get Text  //div[@class='allData-item'][contains(.,'营收比')]/div[2]
+    ${BiteValueA}=  Get Text    //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[5]//ng-component/div/span[1]
+    ${BiteValueB}=  Get Text    //div[@class='allData-item'][contains(.,'营收比')]/div[2]
     Should Match  ${BiteValueA}  ${BiteValueB} 
     # 投注單量
-    ${WagersValueA}=  Get Text  //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[6]//div[@class='text-right cell-nowrap']/span[1]
-    ${WagersValueB}=  Get Text  //div[@class='allData-item'][contains(.,'投注单量')]/div[2]
+    ${WagersValueA}=  Get Text    //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[6]//ng-component/div/span[1]
+    ${WagersValueB}=  Get Text    //div[@class='allData-item'][contains(.,'投注单量')]/div[2]
     Should Match  ${WagersValueA}  ${WagersValueB}
 
 Value Verificarion For Save
     Execute JavaScript  window.document.documentElement.scrollTop = 0;
-    Click Element  //div[@class="header-link-bar text-center"]/a[contains(.,' 逐日 ')]
-    Click Element  //div[@class="header-link-bar text-center"]/a[contains(.,'存提 ')]
+    Click Element    //div[@class="header-link-bar text-center"]/a[contains(.,' 逐日 ')]
+    Click Element    //div[@class="header-link-bar text-center"]/a[contains(.,'存提 ')]
     Sleep  5s
-    Wait Until Page Contains Element  //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[1]/td[3]
+    Wait Until Page Contains Element    //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[1]/td[3]
     # 首存總額
-    ${firstValueA}=  Get Text  //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[2]//div[@class='text-right cell-nowrap']/span[1]
-    ${firstValueB}=  Get Text  //div[@class='allData-item'][contains(.,'首存总额')]/div[2]
+    ${firstValueA}=  Get Text    //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[2]//ng-component/div/span[1]
+    ${firstValueB}=  Get Text    //div[@class='allData-item'][contains(.,'首存总额')]/div[2]
     Should Match  ${firstValueA}  ${firstValueB}
     # 存款總額 
-    ${saveValueA}=  Get Text   //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[3]//div[@class='text-right cell-nowrap']/span[1]
+    ${saveValueA}=  Get Text   //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[3]//ng-component/div/span[1]
     ${saveValueB}=  Get Text   //div[@class='allData-item'][contains(.,'存款总额')]/div[2]
     Should Match  ${saveValueA}  ${saveValueB}
     # 取款總額
-    ${withdrawValueA}=  Get Text  //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[4]//div[@class='text-right cell-nowrap']/span[1]
+    ${withdrawValueA}=  Get Text  //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[4]//ng-component/div/span[1]
     ${withdrawValueB}=  Get Text  //div[@class='allData-item'][contains(.,'取款总额')]/div[2]
     Should Match  ${WithdrawValueA}  ${WithdrawValueB}  
     # 存提差額
-    ${differenceValueA}=  Get Text   //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[5]//div[@class='text-right cell-nowrap']/span[1]
+    ${differenceValueA}=  Get Text   //div[@class='kanban-everyDay-panel mt-2 mb-3']//table/tbody/tr[2]/td[5]//ng-component/div/span[1]
     ${differenceValueB}=  Get Text   //div[@class='allData-item'][contains(.,'存提差额')]/div[2]
     Should Match  ${differenceValueA}  ${differenceValueB}
     
