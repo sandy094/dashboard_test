@@ -16,6 +16,7 @@ Check Topbar Link
 
 Check Sitelist Values
     # 判斷是否有更新頁面
+    # 有效投注
     ${orignalValue}  Set Variable  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
     @{columns}  Set Variable  3  4  5  6  7 
     :FOR  ${column}  IN  @{columns}  

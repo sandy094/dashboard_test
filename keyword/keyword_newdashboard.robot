@@ -17,9 +17,9 @@ Verify Page Title Is Correct
 
 Verify Basic Table Is Active
     # 逐日列表 標題
-    
+    # 遊戲人次待確認
     ${titleA}=  Get Text  //ng2-smart-table[@class='frozen_1']/table/thead/tr[1]/th[2]//span
-    Should Be True  '${titleA}'=='游戏人次'
+    Should Be True  '${titleA}'=='活跃会员'
 
     ${titleB}=  Get Text  //ng2-smart-table[@class='frozen_1']/table/thead/tr[1]/th[3]//span
     Should Be True  '${titleB}'=='损益'
@@ -46,14 +46,14 @@ Verify Basic Table Is Active
 Verify Basic Information Table Is Active
     # 運營資訊
     Click Element  //div[@class="header-link-bar text-center"]/a[contains(.,'运营 ')]
-    Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'游戏人次')]
+    Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'活跃会员')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'损益')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'营收比')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'有效投注')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'投注单量')]
     Page Should Contain Element  //div[@id='barChart']//echarts-ng2//canvas
 
-    @{elements}  Set Variable  游戏人次  损益  营收比  有效投注  投注单量
+    @{elements}  Set Variable  活跃会员  损益  营收比  有效投注  投注单量
     :FOR  ${element}  IN  @{elements}
     \  Click Element  //div[@class="header-link-bar text-center"]/a[contains(.,'运营 ')]
     \  Click Element  //div[@class="allData-item"]/span[contains(.,'${element}')]
@@ -125,7 +125,7 @@ Verify Basic Information Table For Years
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'投注单量')]
     Page Should Contain Element  //div[@id='barChart']//echarts-ng2//canvas
 
-    @{elements}  Set Variable  游戏人次  损益  营收比  有效投注  投注单量
+    @{elements}  Set Variable  活跃会员  损益  营收比  有效投注  投注单量
     :FOR  ${element}  IN  @{elements}
     \  Click Element  //div[@class="header-link-bar text-center"]/a[contains(.,'运营 ')]
     \  Click Element  //div[@class="allData-item"]/span[contains(.,'${element}')]
@@ -155,7 +155,7 @@ Verify Save Information Table Is Active
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'取款总额')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'存提差额')]
 
-    Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'游戏人次')]
+    Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'活跃会员')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'损益')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'营收比')]
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'有效投注')]
