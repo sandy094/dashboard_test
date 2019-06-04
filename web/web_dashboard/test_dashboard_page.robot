@@ -103,7 +103,7 @@ Check Trend Is Active
     \  Sleep  3s
 
     Click Element  //ba-card[@class="dashboss_chart commissionableSums"]//div/a[contains(.,'排行')]
-    @{rows}  Set Variable  2  3  4  5  
+    @{rows}  Set Variable  2  3  4    
     :FOR  ${row}  IN  @{rows}
     \  Click Element  //ba-card[@class="dashboss_chart commissionableSums"]//tbody/tr[${row}]/td[3]/div/small
     \  Sleep  5s
