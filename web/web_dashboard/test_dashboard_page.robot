@@ -139,7 +139,7 @@ Check Trend Is Active
     \  Sleep  3s
 
     Click Element  //ba-card[@class="dashboss_chart wagersCounts"]//div/a[contains(.,'排行')]
-    @{rows}  Set Variable  2  3  4  5  
+    @{rows}  Set Variable  2  3  4   
     :FOR  ${row}  IN  @{rows}
     \  Click Element  //ba-card[@class="dashboss_chart wagersCounts"]//tbody/tr[${row}]/td[3]/div/small
     \  Sleep  5s
@@ -175,7 +175,7 @@ Check Trend Is Active
     \  Sleep  3s
 
     Click Element  //ba-card[@class="dashboss_chart memberCounts"]//div/a[contains(.,'排行')]
-    @{rows}  Set Variable  2  3  4  5  
+    @{rows}  Set Variable  2  3  4    
     :FOR  ${row}  IN  @{rows}
     \  Click Element  //ba-card[@class="dashboss_chart memberCounts"]//tbody/tr[${row}]/td[3]/div/small
     \  Sleep  5s
