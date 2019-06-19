@@ -265,7 +265,6 @@ Check Single Chart
 #     Check Verifyaccount Information Link    对帐资讯    
 #     娱乐城对帐    站台对帐    对帐设定    抽佣设定    优惠设定    累计查询    站台全站汇出
 
-
 *** Keywords ***
 SuiteSetup
     Open Browser    ${LOGIN URL}    ${BROWSER}
