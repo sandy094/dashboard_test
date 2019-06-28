@@ -90,6 +90,7 @@ List In Right Way
     
 # 圖表
 Check Chart By Station
+# 娛樂城圖表切換(損益、有效投注)
     ${checkValueA}=    Get Text    //div[@class='chart-panel']/div/div/span
     @{elements}    Set Variable      2    3    4    5
     :FOR    ${i}    IN    @{elements}
@@ -105,6 +106,9 @@ Check Chart In Game Station
     [Arguments]    ${title}
     Click Element    //div[@class='row hidden_991']/div/div/div/button[contains(.,'${title}')]
     Check Chart By Station
+    # 測活耀會員
+    Select From List By Value    //select[@class='form-control noborder borderr_1px']    4
+    Sleep    5s
     Chart Transform
 
 Check Chart In Game Classification

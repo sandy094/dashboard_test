@@ -58,8 +58,8 @@ Data Table Check Game Of List
     \  Sleep  7s
     \  Wait Until Page Contains Element  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
     \  ${testValueB}=  Get Text  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
-    \  Should Not Match  ${testValueA}  ${testValueB}
-    
+    \  ${matchResult}=   Run Keyword And Return Status    Should Not Match  ${testValueA}  ${testValueB}
+    \  Run Keyword If    '${matchResult}'== 'False'    Run Keyword  Capture Page Screenshot    ELSE    No Operation
     
 Input Account
     [Arguments]    ${account}

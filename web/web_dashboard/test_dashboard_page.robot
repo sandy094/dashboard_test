@@ -199,6 +199,7 @@ Check Trend Is Active
     \  Sleep  3s
     \  Capture Page Screenshot 
 
+    # 切換遊戲頁籤，測試帳號沒辦法用
     # \  Click Element  //div[@id='chart']/div/div/a[2]
     # \  Sleep  10s
     # \  Wait Until Page Contains Element  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
@@ -260,10 +261,6 @@ Check Single Chart
 #     Wait Until Page Contains Element    //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
 #     Mouse Over  //div[@class="col-12 mt-2 pb-4 itrend-chart text-center"]//div/canvas
 #     Capture Page Screenshot
-
-# Check sidebar link Verifyaccount navigation is correct
-#     Check Verifyaccount Information Link    对帐资讯    
-#     娱乐城对帐    站台对帐    对帐设定    抽佣设定    优惠设定    累计查询    站台全站汇出
 
 *** Keywords ***
 SuiteSetup
