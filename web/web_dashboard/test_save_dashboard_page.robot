@@ -95,7 +95,7 @@ Check Trend
 
 Search In Datetime 
     Sleep    10s
-    @{mounths}    Set Variable    0: 2019年6月  1: 2019年5月  2: 2019年4月  3: 2019年3月
+    @{mounths}    Set Variable    0: 2019年7月  1: 2019年6月  2: 2019年5月  3: 2019年4月
     :FOR    ${month}  IN  @{mounths}
     \  Search In Month    ${month}
 

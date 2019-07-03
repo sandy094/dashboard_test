@@ -16,17 +16,17 @@ Check sidebar link Operational navigation is correct
     Click Sidebar Link    运营看板
     Check Operational Information Link    站台列表
 
-Click Search
-    Sleep    10s
-    @{days}  Set Variable   昨日  本周  上周  本月  上月
-    :FOR  ${day}  IN  @{days}
-    \  Quick Search botton    ${day}
-    \  Check Sitelist Values
+# Click Search
+#     Sleep    10s
+#     @{days}  Set Variable   昨日  本周  上周  本月  上月
+#     :FOR  ${day}  IN  @{days}
+#     \  Quick Search botton    ${day}
+#     \  Check Sitelist Values
 
-    @{years}  Set Variable  本年  去年  本季  上季
-    :FOR  ${year}  IN  @{years}
-    \  Quick Search In year and season    ${year}
-    \  Check Sitelist Values
+#     @{years}  Set Variable  本年  去年  本季  上季
+#     :FOR  ${year}  IN  @{years}
+#     \  Quick Search In year and season    ${year}
+#     \  Check Sitelist Values
     
 # Check Trend 
 #     # 趨勢
@@ -48,9 +48,11 @@ Click Search
 #     \  ${ValueA}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[${num}]
 #     \  ${ValueB}=  Get Text  //div[@id="data-table"]//table/tbody/tr[2]/td[${num}]
 #     \  ${ValueA}=    Remove String    ${ValueA}    ,
+#     \  ${ValueA}=    Remove String    ${ValueA}    %
 #     \  ${ValueB}=    Remove String    ${ValueB}    ,
-#     \  Convert To Integer    ${ValueA}
-#     \  Convert To Integer    ${ValueB}
+#     \  ${ValueB}=    Remove String    ${ValueB}    %
+#     \  Convert To Number    ${ValueA}
+#     \  Convert To Number    ${ValueB}
 #     \  ${request}=  Run Keyword And Return Status    Should Be True  ${ValueA}<=${ValueB}
 
 #     # 降冪
@@ -58,62 +60,65 @@ Click Search
 #     \  ${ValueC}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[${num}]
 #     \  ${ValueD}=  Get Text  //div[@id="data-table"]//table/tbody/tr[2]/td[${num}]
 #     \  ${ValueC}=    Remove String    ${ValueC}    ,
+#     \  ${ValueC}=    Remove String    ${ValueC}    %
 #     \  ${ValueD}=    Remove String    ${ValueD}    ,
-#     \  Convert To Integer    ${ValueC}
-#     \  Convert To Integer    ${ValueD}
+#     \  ${ValueD}=    Remove String    ${ValueD}    %
+#     \  Convert To Number    ${ValueC}
+#     \  Convert To Number    ${ValueD}
 #     \  ${request}=  Run Keyword And Return Status    Should Be True  ${ValueC}>=${ValueD}
 
 # Search In Datetime 
 #     Set Browser Implicit Wait    10s
-#     @{mounths}    Set Variable    0: 2019年6月  1: 2019年5月  2: 2019年4月  3: 2019年3月
+#     @{mounths}    Set Variable    0: 2019年7月  1: 2019年6月  2: 2019年5月  3: 2019年4月
 #     :FOR    ${month}  IN  @{mounths}
 #     \  Search In Month    ${month}
 #     \  Check Sitelist Values
 
-# Search In Game Classification
-#     [Teardown]    Run Keyword If Test Failed    Capture Page Screenshot
-#     Reload Page
-#     Sleep    10s
-#     @{labels}    Set Variable    体育-1  视讯-2  机率-3  彩票-4  棋牌-44
-#     :FOR    ${label}  IN  @{labels}
-#     \    Sleep    5s
-#     \    Wait Until Page Contains Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
-#     \    Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
-#     \    Sleep  5s
-#     \    Wait Until Page Contains Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
-#     \    Click Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
-#     \    Wait Until Page Contains Element  //label[@for='${label}']  
-#     \    Click Element  //label[@for='${label}']
-#     \    Sleep    5s
-#     \    Wait Until Page Contains Element  //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
-#     \    Click Element  //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
-#     \    Sleep  5s
-#     \    Check Sitelist Values
-#     \    Search In Group
-#     \    Reload Page
+Search In Game Classification
+    [Teardown]    Run Keyword If Test Failed    Capture Page Screenshot
+    # Reload Page
+    Sleep    10s
+    @{labels}    Set Variable    体育-1  视讯-2  机率-3  彩票-4  棋牌-44
+    :FOR    ${label}  IN  @{labels}
+    \    Sleep    5s
+    \    Wait Until Page Contains Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+    \    Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+    \    Sleep  5s
+    \    Wait Until Page Contains Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
+    \    Click Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
+    \    Wait Until Page Contains Element  //label[@for='${label}']  
+    \    Click Element  //label[@for='${label}']
+    \    Sleep    5s
+    \    Wait Until Page Contains Element  //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
+    \    Click Element  //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
+    \    Sleep  5s
+    \    Check Sitelist Values
+    \    Search In Group
+    \    Reload Page
 
-#     # //tab[@id="category"]//button[contains(.,'套用')]  舊的div要看還有沒有在
     
-#     Sleep    3s
-#     Wait Until Page Contains Element  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
-#     ${orignalValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
-#     # 單選細項
-#     Wait Until Page Contains Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
-#     Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
-#     Wait Until Page Contains Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
-#     Click Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
-#     Click Element    //label[@for='p视讯-2']
-#     Click Element    //label[@for='视讯-BB-1']/label
-#     Click Element    //label[@for='视讯-AG-6']/label
-#     Click Element    //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
-#     Sleep    5s
-#     # 判斷是否有更新頁面
-#     ${newValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
-#     ${matchRequest}=  Run Keyword And Return Status    Should Not Match  ${orignalValue}  ${newValue}
-#     Run Keyword If    '${matchRequest}'=='False'    Capture Page Screenshot    ELSE   No Operation
+    Sleep    3s
+    Wait Until Page Contains Element  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
+    ${orignalValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
+    # 單選細項
+    Wait Until Page Contains Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+    Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
+    Wait Until Page Contains Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
+    Click Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'种类查询')]
+    Click Element    //label[@for='p视讯-2']
+    Click Element    //label[@for='视讯-BB-1']/label
+    Click Element    //label[@for='视讯-AG-6']/label
+    Click Element    //div[@class="col-12 NAVlist"]//button[contains(.,' 查询 ')]
+    Sleep    5s
+    # 判斷是否有更新頁面
+    ${newValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
+    ${matchRequest}=  Run Keyword And Return Status    Should Not Match  ${orignalValue}  ${newValue}
+    Run Keyword If    '${matchRequest}'=='False'    Capture Page Screenshot    ELSE   No Operation
     
-#     # 檢查趨勢圖是否顯示正常
-#     trend  2
+    
+Check Trend 
+    # 檢查趨勢圖是否顯示正常
+    trend  1
 
 # Search In Game Hall
 #     [Teardown]    Run Keyword If Test Failed    Capture Page Screenshot

@@ -18,6 +18,7 @@ Check Sitelist Values
     # 判斷是否有更新頁面
     # 有效投注
     ${orignalValue}  Set Variable  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
+    
     @{columns}  Set Variable  3  4  5  6  7 
     :FOR  ${column}  IN  @{columns}  
     \  Wait Until Page Contains Element    //div[@id="data-table"]//table/tbody/tr[1]/td[${column}]
@@ -43,6 +44,8 @@ trend
     @{tds}  Set Variable  3  4  5
     :FOR  ${td}  IN  @{tds}
     \  Wait Until Page Contains Element  //div[@id="data-table"]//table/tbody/tr[${tr}]/td[${td}]
+    \  ${value}=  Get Text    //div[@id="data-table"]//table/tbody/tr[${tr}]/td[${td}]
+    \  Run Keyword If    '${value}'=='0'    Pass Execution    trend    ELSE    No Operation 
     \  Click Element  //div[@id="data-table"]//table/tbody/tr[${tr}]/td[${td}]
     \  Sleep  10s
     \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
