@@ -36,25 +36,48 @@ Data Table Check Trend Of List
 # 趨勢圖裡的損益查詢 
     @{values}    Set Variable  2  3  4  5  
     :FOR  ${value}  IN  @{values} 
-    \  Click Element  //div[@class='drop-select']
-    \  Wait Until Page Contains Element  //div[@class='drop-select']/ul/li[${value}]
-    \  Click Element  //div[@class='drop-select']/ul/li[${value}]
+    \  Click Element    //div[@class='drop-select-panel']/div[1]
+    \  Wait Until Page Contains Element  //div[@class='drop-select-panel']/div[1]/ul/li[${value}]
+    \  Click Element  //div[@class='drop-select-panel']/div[1]/ul/li[${value}]
     \  Sleep  5s
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Wait Until Page Contains Element    //div[@class='container bg-white']//canvas
+    \  Mouse Over    //div[@class='container bg-white']//canvas
     \  Capture Page Screenshot
+
+Data Table Check Time Of List
+# 趨勢圖裡時間查詢(以昨日為主)
+# //div[@class='drop-select-panel']/div[contains(.,'七日资讯 ')] 
+    Wait Until Page Contains Element    //div[@class="container bg-white"]//div[@class='drop-select-panel']/div[contains(.,'七日资讯 ')]
+    Mouse Over    //div[@class="container bg-white"]//div[@class='drop-select-panel']/div[contains(.,'七日资讯 ')]
+    Click Element    //div[@class="container bg-white"]//div[@class='drop-select-panel']/div[contains(.,'七日资讯 ')]
+
+    # 切換以時合計
+    Sleep    5s
+    # Wait Until Page Contains Element     //div[@class='drop-select-panel']/div[2]/ul/li[contains(.,'时 ')]
+    # Click Element    //div[@class='drop-select-panel']/div[2]/ul/li[contains(.,'时 ')]
+    # Wait Until Page Contains Element    //div[@class='container bg-white']//canvas
+    # Mouse Over    //div[@class='container bg-white']//canvas
+    # Sleep  5s
+    # Capture Page Screenshot
+    # 切換以日合計
+    Wait Until Page Contains Element    //div[@class='drop-select-panel']/div[2]/ul/li[contains(.,'日 ')]
+    Click Element    //div[@class='drop-select-panel']/div[2]/ul/li[contains(.,'日 ')]
+    Wait Until Page Contains Element    //div[@class='container bg-white']//canvas
+    Mouse Over    //div[@class='container bg-white']//canvas
+    Sleep  3s
+    Capture Page Screenshot 
 
 Data Table Check Game Of List
 # 遊戲頁籤的損益查詢
     ${testValueA}  Set Variable    0
     @{values}    Set Variable  2  3  4  5  
     :FOR  ${value}  IN  @{values} 
-    \  Wait Until Page Contains Element  //div[@class='drop-select']
-    \  Click Element  //div[@class='drop-select']
+    \  Wait Until Page Contains Element    //div[@class='drop-select-panel']/div
+    \  Click Element    //div[@class='drop-select-panel']/div
     \  Sleep  2s
-    \  ${result}=    Run Keyword And Return Status    Wait Until Page Contains Element  //div[@class='drop-select']/ul/li[${value}]
+    \  ${result}=    Run Keyword And Return Status    Wait Until Page Contains Element    //div[@class='drop-select-panel']/div/ul/li[${value}]
     \  Run Keyword If    '${result}'=='False'    Capture Page Screenshot    Else    No Operation    
-    \  Click Element  //div[@class='drop-select']/ul/li[${value}]
+    \  Click Element    //div[@class='drop-select-panel']/div/ul/li[${value}]
     \  Sleep  7s
     \  Wait Until Page Contains Element  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
     \  ${testValueB}=  Get Text  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]

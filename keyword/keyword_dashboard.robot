@@ -9,7 +9,7 @@ Check Chart In Four card
     Page Should Contain Element    //ba-card[@class='dashboss_chart payoffSums']//canvas
     Page Should Contain Element    //ba-card[@class='dashboss_chart commissionableSums']//canvas
     Page Should Contain Element    //ba-card[@class='dashboss_chart wagersCounts']//canvas
-    Page Should Contain Element    //ba-card[@class='dashboss_chart memberCounts']//canvas
+    Page Should Contain Element    //ba-card[@class='dashboss_chart memberSums']//canvas
 
 Check Chart When Click list In Right
     [Documentation]    When Click list in Right
@@ -30,7 +30,7 @@ Check Topbar Link
 
 
 Count In A Day For Today
-    @{cards}    Set Variable    dashboss_chart payoffSums    dashboss_chart commissionableSums    dashboss_chart wagersCounts    dashboss_chart memberCounts    
+    @{cards}    Set Variable    dashboss_chart payoffSums    dashboss_chart commissionableSums    dashboss_chart wagersCounts    dashboss_chart memberSums    
     :FOR    ${card}    IN    @{cards}
     \    Click Element    //ba-card[@class='${card}']//button[@id='sortMenu']
     \    Click Element    //ba-card[@class='${card}']//li/a[contains(.,'以日合计')]
@@ -39,7 +39,7 @@ Count In A Day For Today
     \    Capture Page Screenshot
 
 Count In Seven Days For yesterday
-    @{cards}    Set Variable    dashboss_chart payoffSums    dashboss_chart commissionableSums    dashboss_chart wagersCounts    dashboss_chart memberCounts    
+    @{cards}    Set Variable    dashboss_chart payoffSums    dashboss_chart commissionableSums    dashboss_chart wagersCounts    dashboss_chart memberSums    
     :FOR    ${card}    IN    @{cards}
     \    Wait Until Page Contains Element   //ba-card[@class='${card}']//button[@id='sortMenu']
     # \    Click Element    //ba-card[@class='${card}']//button[@id='sortMenu']
@@ -54,7 +54,7 @@ Count In Seven Days For yesterday
     \    Capture Page Screenshot
 
 Count In A Day For week
-    @{cards}    Set Variable    dashboss_chart payoffSums    dashboss_chart commissionableSums    dashboss_chart wagersCounts    dashboss_chart memberCounts    
+    @{cards}    Set Variable    dashboss_chart payoffSums    dashboss_chart commissionableSums    dashboss_chart wagersCounts    dashboss_chart memberSums    
     :FOR    ${card}    IN    @{cards}
     \    Click Element    //ba-card[@class='${card}']//button[@id='sortMenu']
     \    Click Element    //ba-card[@class='${card}']//a[contains(.,"以周合计")]
@@ -63,7 +63,7 @@ Count In A Day For week
     \    Capture Page Screenshot
 
 Count In A Day For months
-    @{cards}    Set Variable    dashboss_chart payoffSums    dashboss_chart commissionableSums    dashboss_chart wagersCounts    dashboss_chart memberCounts    
+    @{cards}    Set Variable    dashboss_chart payoffSums    dashboss_chart commissionableSums    dashboss_chart wagersCounts    dashboss_chart memberSums    
     :FOR    ${card}    IN    @{cards}
     \    Click Element    //ba-card[@class='${card}']//button[@id='sortMenu']
     \    Wait Until Page Contains Element  //ba-card[@class='${card}']//a[contains(.,"以周合计")]
@@ -92,7 +92,7 @@ List In Right Way
 Check Chart By Station
 # 娛樂城圖表切換(損益、有效投注)
     ${checkValueA}=    Get Text    //div[@class='chart-panel']/div/div/span
-    @{elements}    Set Variable      2    3    4    5
+    @{elements}    Set Variable      2    3    4    6
     :FOR    ${i}    IN    @{elements}
     \    Select From List By Value    //select[@class='form-control noborder borderr_1px']    ${i}
     \    Sleep    10s
@@ -119,7 +119,7 @@ Check Chart In Game Classification
     Chart Transform
 
 Check Chart By Classification
-    @{elements}    Set Variable    1    2    3    4    5
+    @{elements}    Set Variable    1    2    3    4    6
     :FOR    ${i}    IN    @{elements}
     \    Select From List By Value    //select[@class='form-control noborder borderr_1px']    ${i}
     \    Sleep    10s
