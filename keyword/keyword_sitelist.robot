@@ -48,25 +48,26 @@ trend
     \  Run Keyword If    '${value}'=='0'    Pass Execution    trend    ELSE    No Operation 
     \  Click Element  //div[@id="data-table"]//table/tbody/tr[${tr}]/td[${td}]
     \  Sleep  10s
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Wait Until Page Contains Element    //div[@id='growth']//canvas
+    \  Mouse Over    //div[@id='growth']//canvas
     \  Capture Page Screenshot
     
     \  Data Table Check Trend Of List
-    \  Click Element  //div[@class='drop-select']
-    \  Wait Until Page Contains Element  //div[@class='drop-select']/ul/li[1]
-    \  Click Element  //div[@class='drop-select']/ul/li[1]
+    # 以時.日合計
+    \  Click Element    //div[@class='drop-select-panel']/div[2]
+    \  Wait Until Page Contains Element    //div[@class='drop-select-panel']/div[2]/ul/li[contains(.,'时 ')]
     # 時
-    \  Click Element  //div[@class="modal-content"]//div/span[2]/a
+    \  Click Element    //div[@class='drop-select-panel']/div[2]/ul/li[contains(.,'时 ')]
     \  Sleep  5s
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Wait Until Page Contains Element    //div[@id='growth']//canvas
+    \  Mouse Over    //div[@id='growth']//canvas
     \  Capture Page Screenshot
     # 日
-    \  Click Element  //div[@class="modal-content"]//div/span[3]/a
+    \  Click Element    //div[@class='drop-select-panel']/div[2]
+    \  Click Element    //div[@class='drop-select-panel']/div[2]/ul/li[contains(.,'日 ')]
     \  Sleep  5s
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Wait Until Page Contains Element    //div[@id='growth']//canvas
+    \  Mouse Over    //div[@id='growth']//canvas
     \  Capture Page Screenshot
     # 遊戲頁籤
     \  Click Element  //div[@id='chart']/div/div/a[2]
@@ -75,5 +76,5 @@ trend
     \  ${testValue}=  Get Text  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
     \  ${emptyRequest}=  Run Keyword And Return Status    Should Not Be Empty  ${testValue}
     \  Data Table Check Game Of List
-    \  Click Element  //div[@class='container bg-white test']/div/i
+    \  Click Element    //div[@class='container bg-white']/div/i
 
