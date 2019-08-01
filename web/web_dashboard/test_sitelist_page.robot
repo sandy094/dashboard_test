@@ -69,7 +69,7 @@ Short
 
 Search In Datetime 
     Set Browser Implicit Wait    10s
-    @{mounths}    Set Variable    0: 2019年7月  1: 2019年6月  2: 2019年5月  3: 2019年4月
+    @{mounths}    Set Variable    0: 2019年8月  1: 2019年7月  2: 2019年6月  3: 2019年5月
     :FOR    ${month}  IN  @{mounths}
     \  Search In Month    ${month}
     \  Check Sitelist Values
@@ -122,7 +122,7 @@ Check Trend
 
 Search In Game Hall
     [Teardown]    Run Keyword If Test Failed    Capture Page Screenshot
-    # Reload Page
+    Reload Page
     Sleep    10s
     # 查BBIN
     ${orignalValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]

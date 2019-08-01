@@ -77,4 +77,3 @@ trend
     \  ${emptyRequest}=  Run Keyword And Return Status    Should Not Be Empty  ${testValue}
     \  Data Table Check Game Of List
     \  Click Element    //div[@class='container bg-white']/div/i
-

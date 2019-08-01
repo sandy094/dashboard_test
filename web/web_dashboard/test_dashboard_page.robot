@@ -14,10 +14,10 @@ Check sidebar link Dashboard navigation is correct
     Close Announcement
     Set Browser Implicit Wait    20s
     Click Sidebar Link    运营看板
-    Click Topbar Link     站台列表
-    Click Topbar Link     游戏解析
-    No Operation
-    Check Dashboard Link    运营看板
+    # Click Topbar Link     站台列表
+    # Click Topbar Link     游戏解析
+    # No Operation
+    # Check Dashboard Link    运营看板
     Sleep  2s
 
 Click Search
@@ -173,7 +173,7 @@ Check Trend Is Active
 Search In Datetime 
     Reload Page
     Sleep    10s
-    @{mounths}    Set Variable    0: 2019年7月  1: 2019年6月  2: 2019年5月  3: 2019年4月
+    @{mounths}    Set Variable    0: 2019年8月  1: 2019年7月  2: 2019年6月  3: 2019年5月
     :FOR    ${month}  IN  @{mounths}
     \  Search In Month    ${month}
     
