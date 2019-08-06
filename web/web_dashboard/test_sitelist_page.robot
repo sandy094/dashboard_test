@@ -115,8 +115,6 @@ Search In Game Classification
     ${matchRequest}=  Run Keyword And Return Status    Should Not Match  ${orignalValue}  ${newValue}
     Run Keyword If    '${matchRequest}'=='False'    Capture Page Screenshot    ELSE   No Operation
     
-
-Check Trend 
     # 檢查趨勢圖是否顯示正常
     trend  1
 
