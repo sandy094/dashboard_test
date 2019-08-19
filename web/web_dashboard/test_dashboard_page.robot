@@ -126,8 +126,8 @@ Check Trend Is Active
     :FOR  ${row}  IN  @{rows}
     \  Click Element  //ba-card[@class="dashboss_chart wagersCounts"]//tbody/tr[${row}]/td[3]/div/small
     \  Sleep  5s
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Wait Until Page Contains Element  //div[@class='container bg-white']//canvas
+    \  Mouse Over  //div[@class='container bg-white']//canvas
     \  Capture Page Screenshot
 
     \  Data Table Check Trend Of List

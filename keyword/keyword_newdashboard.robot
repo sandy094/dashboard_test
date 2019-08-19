@@ -68,9 +68,9 @@ Verify SiteRank Value For Basic
     @{rowNumbers}  Set Variable    1  2  3 
     :FOR  ${rowNumber}  IN  @{rowNumbers}
     \  Click Element  //table[@id="rank"]/tbody/tr[${rowNumber}]/td[3]
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
+    \  Wait Until Page Contains Element    //div[@id='growth']/echarts-ng2/div/div/canvas
     \  Sleep  3s
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Mouse Over    //div[@id='growth']/echarts-ng2/div/div/canvas
     \  Data Table Check Trend Of List
     # 切換遊戲
     # \  Click Element  //div[@id='chart']/div/div/a[2]
@@ -80,7 +80,7 @@ Verify SiteRank Value For Basic
     # \  ${testValue}=  Get Text  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
     # \  Should Not Be Empty  ${testValue}
     # \  Data Table Check Game Of List
-    \  Click Element  //div[@class='container bg-white test']/div/i
+    \  Click Element  //div[@class='container bg-white']/div[@class='close_btn']/i
 
     # 點展開
     Wait Until Page Contains Element  //div[@class="kanban-title"]/div/a/a
@@ -162,7 +162,7 @@ Verify Save Information Table Is Active
     Page Should Contain Element  //div[@class="allData-item"]/span[contains(.,'投注单量')]
     Page Should Contain Element  //div[@id='barChart']//echarts-ng2//canvas
     # change chart
-    @{elements}  Set Variable  存款总额  首存总额  取款总额  存提差额  游戏人次  损益  营收比  有效投注  投注单量
+    @{elements}  Set Variable  存款总额  首存总额  取款总额  存提差额  活跃会员  损益  营收比  有效投注  投注单量
     :FOR  ${element}  IN  @{elements}
     \  Click Element  //div[@class="header-link-bar text-center"]/a[contains(.,'运营 ')]
     \  Click Element  //div[@class="allData-item"]/span[contains(.,'${element}')]

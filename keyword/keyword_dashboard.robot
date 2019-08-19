@@ -82,7 +82,7 @@ List In Right Way
     @{categorys}    Set Variable    机率    视讯    体育    棋牌    彩票
     :FOR    ${category}    IN    @{categorys}
     \    Wait Until Page Contains Element    //div[@class="table-responsive"]//tr[contains(.,"${category}")]
-    \    Sleep    8s
+    \    Sleep    10s
     \    Click Element    //div[@class="table-responsive"]//td[contains(.,"${category}")]
     \    Sleep    5s
     \    Page Should Contain Element    //table[@class='table dataTable']
