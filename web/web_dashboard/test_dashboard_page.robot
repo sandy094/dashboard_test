@@ -159,16 +159,16 @@ Check Trend Is Active
     \  Click Element    //div[@class='drop-select-panel']/div
     
 
-    # 切換遊戲頁籤，測試帳號(sandy1234)沒辦法用
-    \  Click Element  //div[@id='chart']/div/div/a[2]
-    \  Sleep  10s
-    \  Wait Until Page Contains Element  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
-    \  ${testValue}=  Get Text  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
-    \  Should Not Be Empty  ${testValue}
-    \  Data Table Check Game Of List
+    # # 切換遊戲頁籤，活耀會員沒有權限
+    # \  Click Element  //div[@id='chart']/div/div/a[2]
+    # \  Sleep  10s
+    # \  Wait Until Page Contains Element  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
+    # \  ${testValue}=  Get Text  //table[@class='table-striped type-table']//tbody/tr[1]/td[2]
+    # \  Should Not Be Empty  ${testValue}
+    # \  Data Table Check Game Of List
 
-    \  Click Element  //div[@class="container bg-white"]/div/i
-    \  Sleep  3s
+    # \  Click Element  //div[@class="container bg-white"]/div/i
+    # \  Sleep  3s
 
 Search In Datetime 
     Reload Page
