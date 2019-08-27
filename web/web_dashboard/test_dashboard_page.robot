@@ -14,10 +14,6 @@ Check sidebar link Dashboard navigation is correct
     Close Announcement
     Set Browser Implicit Wait    20s
     Click Sidebar Link    运营看板
-    # Click Topbar Link     站台列表
-    # Click Topbar Link     游戏解析
-    # No Operation
-    # Check Dashboard Link    运营看板
     Sleep  2s
 
 Click Search
@@ -156,7 +152,7 @@ Check Trend Is Active
     \  Capture Page Screenshot
 
     \  Data Table Check Trend Of List
-    \  Click Element    //div[@class='drop-select-panel']/div
+    \  Click Element    //div[@class="container bg-white"]/div/i
     
 
     # # 切換遊戲頁籤，活耀會員沒有權限
