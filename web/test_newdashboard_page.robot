@@ -39,7 +39,7 @@ Check Search For Basic
     :FOR  ${season}  IN  @{seasons}
     \  Sleep  5s
     \  Click Element  //a[@class='active-bright']
-    \  Quick Search In year and season    ${season}
+    \  Quick Search botton    ${season}
     \  Verify Basic Table For Years
     \  Verify Basic Information Table For Years
     \  Verify SiteRank Value For Basic  
@@ -59,7 +59,7 @@ Check Save Search
     :FOR  ${season}  IN  @{seasons}
     \  Sleep  5s
     \  Click Element  //a[@class='active-bright']
-    \  Quick Search In year and season    ${season}
+    \  Quick Search botton    ${season}
     \  Verify Save Page Is Active
 
 Search In Datetime For Basic

@@ -103,6 +103,7 @@ Login Page
 Quick Search In year and season
     #本年.本季快搜
     [Arguments]    ${title}
+    # 快捷鍵
     Page Should Contain Element    //div[@class="Interval_type mt-2"]
     Mouse Over    //div[@class="Interval_type mt-2"]
     Wait Until Page Contains Element    //div[@id="pick"]/ul/li[contains(.,'${title}')]

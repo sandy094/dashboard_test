@@ -16,8 +16,8 @@ Check sidebar link Dashboard navigation is correct
     Click Sidebar Link    运营看板
     Sleep    10s
     Click Element    //a[@class='borderr_1px active'][contains(.,'运营看板')]
-    Wait Until Page Contains Element  //a[@class='borderr_1px active'][contains(.,'运营看板')]/div[contains(.,' 存提资讯 ')]
-    Click Element  //a[@class='borderr_1px active'][contains(.,'运营看板')]/div[contains(.,' 存提资讯 ')]
+    Wait Until Page Contains Element  //a[@class='borderr_1px active acting'][contains(.,'运营看板')]/div/span[contains(.,' 存提资讯 ')]
+    Click Element  //a[@class='borderr_1px active acting'][contains(.,'运营看板')]/div/span[contains(.,' 存提资讯 ')]
    
 Click Search
     Sleep    10s
@@ -38,7 +38,7 @@ Click Search
 
     @{seasons}  Set Variable  本年  本季  上季
     :FOR  ${season}  IN  @{seasons}
-    \  Quick Search In year and season    ${season}
+    \  Quick Search botton    ${season}
     \  Check Chart In Four card
     \  Count In A Day For months
 
@@ -54,44 +54,44 @@ Check Trend
     \  Wait Until Page Contains Element  //ba-card[@id='differenceAmountContent']//tbody/tr[${row}]/td[3]/div/small
     \  Click Element  //ba-card[@id='differenceAmountContent']//tbody/tr[${row}]/td[3]/div/small
     \  Sleep  2s
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
+    \  Wait Until Page Contains Element  //div[@class='container bg-white']//canvas
     \  Sleep  5s
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Mouse Over  //div[@class='container bg-white']//canvas
     \  Capture Page Screenshot
     \  Data Table Check Trend Of List
-    \  Click Element  //div[@class="container bg-white test"]/div/i
+    \  Click Element  //div[@class='container bg-white']/div/i
 
     Click Element  //ba-card[@id='withdrawAmountContent']//div/a[contains(.,'排行')]
     @{rows}  Set Variable  2  3  4  
     :FOR  ${row}  IN  @{rows}
     \  Click Element  //ba-card[@id='withdrawAmountContent']//tbody/tr[${row}]/td[3]/div/small
     \  Sleep  2s
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Wait Until Page Contains Element  //div[@class='container bg-white']//canvas
+    \  Mouse Over  //div[@class='container bg-white']//canvas
     \  Capture Page Screenshot
     \  Data Table Check Trend Of List
-    \  Click Element  //div[@class="container bg-white test"]/div/i
+    \  Click Element  //div[@class='container bg-white']/div/i
 
     Click Element  //ba-card[@id='depositAmountContent']//div/a[contains(.,'排行')]
     @{rows}  Set Variable  2  3  4 
     :FOR  ${row}  IN  @{rows}
     \  Click Element  //ba-card[@id='depositAmountContent']//tbody/tr[${row}]/td[3]/div/small
     \  Sleep  2s
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Wait Until Page Contains Element  //div[@class='container bg-white']//canvas
+    \  Mouse Over  //div[@class='container bg-white']//canvas
     \  Capture Page Screenshot
     \  Data Table Check Trend Of List
-    \  Click Element  //div[@class="container bg-white test"]/div/i
+    \  Click Element  //div[@class='container bg-white']/div/i
 
     Click Element  //ba-card[@id='firstDepositAmountContent']//div/a[contains(.,'排行')]
     @{rows}  Set Variable  2  3  4  
     :FOR  ${row}  IN  @{rows}
     \  Click Element  //ba-card[@id='firstDepositAmountContent']//tbody/tr[${row}]/td[3]/div/small
     \  Sleep  2s
-    \  Wait Until Page Contains Element  //div[@class='container bg-white test']//canvas
-    \  Mouse Over  //div[@class='container bg-white test']//canvas
+    \  Wait Until Page Contains Element  //div[@class='container bg-white']//canvas
+    \  Mouse Over  //div[@class='container bg-white']//canvas
     \  Capture Page Screenshot
-    \  Click Element  //div[@class="container bg-white test"]/div/i
+    \  Click Element  //div[@class='container bg-white']/div/i
 
 Search In Datetime 
     Sleep    10s

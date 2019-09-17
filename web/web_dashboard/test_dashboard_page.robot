@@ -37,7 +37,7 @@ Click Search
 Click Search In Year
     @{seasons}  Set Variable  本年  去年  本季  上季
     :FOR  ${season}  IN  @{seasons}
-    \  Quick Search In year and season    ${season}
+    \  Quick Search botton    ${season}
     \  Check Chart In Four card
     \  Count In A Day For months
 

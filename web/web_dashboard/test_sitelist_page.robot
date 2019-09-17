@@ -25,7 +25,7 @@ Click Search
 
     @{years}  Set Variable  本年  去年  本季  上季
     :FOR  ${year}  IN  @{years}
-    \  Quick Search In year and season    ${year}
+    \  Quick Search botton    ${year}
     \  Check Sitelist Values
     
 Check Trend 
