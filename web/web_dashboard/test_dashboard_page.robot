@@ -169,7 +169,7 @@ Check Trend Is Active
 Search In Datetime 
     Reload Page
     Sleep    10s
-    @{mounths}    Set Variable    0: 2019年9月  1: 2019年8月  2: 2019年7月  3: 2019年6月
+    @{mounths}    Set Variable    0: 2019年10月  1: 2019年9月  2: 2019年8月  3: 2019年7月
     :FOR    ${month}  IN  @{mounths}
     \  Search In Month    ${month}
     
