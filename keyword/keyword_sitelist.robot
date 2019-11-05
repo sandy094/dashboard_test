@@ -19,7 +19,8 @@ Check Sitelist Values
     # 有效投注
     ${orignalValue}  Set Variable  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
     
-    @{columns}  Set Variable  3  4  5  6  7 
+    @{columns} 
+     Set Variable  3  4  5  6  7 
     :FOR  ${column}  IN  @{columns}  
     \  Wait Until Page Contains Element    //div[@id="data-table"]//table/tbody/tr[1]/td[${column}]
     \  ${newValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[${column}]

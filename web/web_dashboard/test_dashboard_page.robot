@@ -49,7 +49,7 @@ Click Search In Year
 
 Check Trend Is Active
     Reload Page
-    Sleep    10s
+    Sleep    15s
     Execute JavaScript  window.document.documentElement.scrollTo = 0;
     # 排行裡單一站台的趨勢圖(昨日的4張卡片)
     Wait Until Element Is Visible   //div[@class="baDateform btn-group hidden_991"]/a[contains(.,'昨日')]  
@@ -169,7 +169,7 @@ Check Trend Is Active
 Search In Datetime 
     Reload Page
     Sleep    10s
-    @{mounths}    Set Variable    0: 2019年10月  1: 2019年9月  2: 2019年8月  3: 2019年7月
+    @{mounths}    Set Variable    0: 2019年11月  1: 2019年10月  2: 2019年9月  3: 2019年8月
     :FOR    ${month}  IN  @{mounths}
     \  Search In Month    ${month}
     
