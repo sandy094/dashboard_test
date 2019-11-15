@@ -120,7 +120,7 @@ Search In Game Classification
 
 Search In Game Hall
     [Teardown]    Run Keyword If Test Failed    Capture Page Screenshot
-    Reload Page
+    # Reload Page
     Sleep    10s
     # 查BBIN
     ${orignalValue}=  Get Text  //div[@id="data-table"]//table/tbody/tr[1]/td[3]
@@ -171,6 +171,9 @@ Search In Game Hall
 Search In Game Name
     Reload Page
     Sleep    10s
+    Wait Until Element Is Visible   //div[@class="baDateform btn-group hidden_991"]/a[contains(.,'上周')]  
+    Click Link    //div[@class="baDateform btn-group hidden_991"]/a[contains(.,'上周')] 
+
     Wait Until Page Contains Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
     Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
     Wait Until Page Contains Element    //div[@class="text-center mobile_btn_area2"]/a[contains(.,'游戏查询')]
