@@ -54,14 +54,14 @@ trend
     
     \  Data Table Check Trend Of List
     # 以時.日合計
-    \  Click Element    //div[@class='drop-select-panel']/div[2]
-    \  Wait Until Page Contains Element    //div[@class='drop-select-panel']/div[2]/ul/li[contains(.,'时 ')]
-    # 時
-    \  Click Element    //div[@class='drop-select-panel']/div[2]/ul/li[contains(.,'时 ')]
-    \  Sleep  5s
-    \  Wait Until Page Contains Element    //div[@id='growth']//canvas
-    \  Mouse Over    //div[@id='growth']//canvas
-    \  Capture Page Screenshot
+    # \  Click Element    //div[@class='drop-select-panel']/div[2]
+    # \  Wait Until Page Contains Element    //div[@class='drop-select-panel']/div[2]/ul/li[contains(.,'时 ')]
+    # # 時
+    # \  Click Element    //div[@class='drop-select-panel']/div[2]/ul/li[contains(.,'时 ')]
+    # \  Sleep  5s
+    # \  Wait Until Page Contains Element    //div[@id='growth']//canvas
+    # \  Mouse Over    //div[@id='growth']//canvas
+    # \  Capture Page Screenshot
     # 日
     \  Click Element    //div[@class='drop-select-panel']/div[2]
     \  Click Element    //div[@class='drop-select-panel']/div[2]/ul/li[contains(.,'日 ')]
