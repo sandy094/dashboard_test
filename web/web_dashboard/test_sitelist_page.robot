@@ -23,10 +23,10 @@ Click Search
     \  Quick Search botton    ${day}
     \  Check Sitelist Values
 
-    @{years}  Set Variable  本年  去年  本季  上季
-    :FOR  ${year}  IN  @{years}
-    \  Quick Search botton    ${year}
-    \  Check Sitelist Values
+    # @{years}  Set Variable  本年  去年  本季  上季
+    # :FOR  ${year}  IN  @{years}
+    # \  Quick Search botton    ${year}
+    # \  Check Sitelist Values
     
 Check Trend 
     # 趨勢
@@ -69,7 +69,7 @@ Short
 
 Search In Datetime 
     Set Browser Implicit Wait    10s
-    @{mounths}    Set Variable    0: 2020年3月  1: 2020年2月   2: 2020年1月  3: 2019年12月
+    @{mounths}    Set Variable    0: 2020年4月  1: 2020年3月   2: 2020年2月  3: 2020年1月
     :FOR    ${month}  IN  @{mounths}
     \  Search In Month    ${month}
     \  Check Sitelist Values

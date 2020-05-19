@@ -24,28 +24,28 @@ Click Search
     Execute JavaScript  window.document.documentElement.scrollTo = 0;
     Count In Seven Days For yesterday
 
-    Quick Search botton    本周
-    Check Chart In Four card
-    Execute JavaScript  window.document.documentElement.scrollTo = 0;
-    Count In A Day For week
+    # Quick Search botton    本周
+    # Check Chart In Four card
+    # Execute JavaScript  window.document.documentElement.scrollTo = 0;
+    # Count In A Day For week
 
     Quick Search botton    上周
     Check Chart In Four card
     Execute JavaScript  window.document.documentElement.scrollTo = 0;
     Count In A Day For week
     
-Click Search In Year
-    @{seasons}  Set Variable  本年  去年  本季  上季
-    :FOR  ${season}  IN  @{seasons}
-    \  Quick Search botton    ${season}
-    \  Check Chart In Four card
-    \  Count In A Day For months
+# Click Search In Year
+#     @{seasons}  Set Variable  本年  去年  本季  上季
+#     :FOR  ${season}  IN  @{seasons}
+#     \  Quick Search botton    ${season}
+#     \  Check Chart In Four card
+#     \  Count In A Day For months
 
-    @{years}  Set Variable  本月  上月
-    :FOR  ${year}  IN  @{years}
-    \  Quick Search botton    ${year}
-    \  Check Chart In Four card
-    \  Count In A Day For months
+#     @{years}  Set Variable  本月  上月
+#     :FOR  ${year}  IN  @{years}
+#     \  Quick Search botton    ${year}
+#     \  Check Chart In Four card
+#     \  Count In A Day For months
 
 Check Trend Is Active
     Reload Page
@@ -169,7 +169,7 @@ Check Trend Is Active
 Search In Datetime 
     Reload Page
     Sleep    10s
-    @{mounths}    Set Variable    0: 2020年3月  1: 2020年2月   2: 2020年1月  3: 2019年12月
+    @{mounths}    Set Variable    0: 2020年4月  1: 2020年3月   2: 2020年2月  3: 2020年1月
     :FOR    ${month}  IN  @{mounths}
     \  Search In Month    ${month}
     
