@@ -47,7 +47,7 @@ trend
     \  ${value}=  Get Text    //div[@id="data-table"]//table/tbody/tr[${tr}]/td[${td}]
     \  Run Keyword If    '${value}'=='0'    Pass Execution    trend    ELSE    No Operation 
     \  Click Element  //div[@id="data-table"]//table/tbody/tr[${tr}]/td[${td}]
-    \  Sleep  10s
+    \  Sleep  15s
     \  Wait Until Page Contains Element    //div[@id='growth']//canvas
     \  Mouse Over    //div[@id='growth']//canvas
     \  Capture Page Screenshot

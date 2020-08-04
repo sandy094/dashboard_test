@@ -69,7 +69,7 @@ Short
 
 Search In Datetime 
     Set Browser Implicit Wait    10s
-    @{mounths}    Set Variable    0: 2020年4月  1: 2020年3月   2: 2020年2月  3: 2020年1月
+    @{mounths}    Set Variable    0: 2020年7月  1: 2020年6月   2: 2020年5月  3: 2020年4月
     :FOR    ${month}  IN  @{mounths}
     \  Search In Month    ${month}
     \  Check Sitelist Values
@@ -77,10 +77,10 @@ Search In Datetime
 Search In Game Classification
     [Teardown]    Run Keyword If Test Failed    Capture Page Screenshot
     Reload Page
-    Sleep    10s
+    Sleep    15s
     @{labels}    Set Variable    体育-1  视讯-2  机率-3  彩票-4  棋牌-44
     :FOR    ${label}  IN  @{labels}
-    \    Sleep    5s
+    \    Sleep    10s
     \    Wait Until Page Contains Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
     \    Click Element    //div[@class='filter-type']/div/span[contains(.,'游戏筛选')]
     \    Sleep  5s
